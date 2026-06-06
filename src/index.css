@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: #08070a; color: #f0ece8; }
+a { text-decoration: none; }
+
+/* ── Mobile base ── */
+html { -webkit-text-size-adjust: 100%; }
+img  { max-width: 100%; }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-track { animation: ticker 28s linear infinite; }
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 18px rgba(194,69,12,.35); }
+  50%       { box-shadow: 0 0 36px rgba(194,69,12,.65); }
+}
+.btn-glow { animation: glow 3s ease-in-out infinite; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s, transform 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s;
+}
+.reveal.visible, .reveal-right.visible { opacity: 1; transform: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.hero-h1      { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both; }
+.hero-p       { animation: fadeUp 0.8s 0.15s cubic-bezier(0.22,1,0.36,1) both; }
+.hero-actions { animation: fadeUp 0.8s 0.25s cubic-bezier(0.22,1,0.36,1) both; }
+.hero-cards   { animation: fadeRight 0.8s 0.1s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08070a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cea14e;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e88c3a;
+}
+
+/* Navbar Marquee */
+.ticker-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+/* Products */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.product-card-anim {
+  animation: fadeInUp 0.4s ease both;
+}
