@@ -73,7 +73,7 @@ export default function BlogPage() {
                     {item.year}
                   </span>
                   {/* Dot */}
-                  <div className="hidden sm:block w-3 h-3 rounded-full bg-orange-600 border-2 border-[#08070a] ring-2 ring-orange-600/30 relative left-[calc(100%+16px+1.5px)] -translate-x-1/2" />
+                  <div className="hidden sm:block w-3 h-3 rounded-full bg-orange-600 border-2 border-[#08070a] ring-2 ring-orange-600/30 relative left-[calc(100%+-50px+1.5px)] -translate-x-1/2" />
                 </div>
 
                 {/* Content */}
