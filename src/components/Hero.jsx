@@ -6,28 +6,52 @@ import { Suspense } from 'react';
 import Model from '../animation/Model';
 
 export default function Hero() {
-
   const [hidden, setHidden] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setHidden(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setHidden(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.play().catch(() => {
+        const tryPlay = () => { v.play(); document.removeEventListener("touchstart", tryPlay); };
+        document.addEventListener("touchstart", tryPlay, { once: true });
+      });
+    }
   }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-32 pb-16 overflow-hidden">
 
-      <div className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 70% 60% at 30% 40%, rgba(194,69,12,.18), transparent 60%), radial-gradient(ellipse 50% 50% at 75% 65%, rgba(232,140,58,.07), transparent 55%)" }} />
-      <div className="absolute inset-0 opacity-[.035] pointer-events-none"
-        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")" }} />
+      {/* ── Video background ── */}
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/videos/gto-hero-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      />
 
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-[#08070a]/70" />
+
+      {/* Color wash on top of video */}
+      <div className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 70% 60% at 30% 40%, rgba(194,69,12,.25), transparent 60%), radial-gradient(ellipse 50% 50% at 75% 65%, rgba(232,140,58,.1), transparent 55%)" }} />
+
+      {/* Bottom fade into page background */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 sm:h-64 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, transparent, #08070a)" }} />
+
+      <div className="relative max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
 
         {/* Copy */}
         <div>
@@ -41,7 +65,7 @@ export default function Hero() {
             Drive <em className="text-yellow-500 not-italic">performance</em> with premium car products.
           </h1>
 
-          <p className="hero-p text-slate-400 leading-relaxed mb-8"
+          <p className="hero-p text-slate-300 leading-relaxed mb-8"
             style={{ fontSize: "clamp(0.875rem, 2.5vw, 1rem)" }}>
             Discover trusted components, accessories, and expert support for every vehicle brand across the Philippines.
           </p>
@@ -52,13 +76,13 @@ export default function Hero() {
               Shop Now
             </button>
             <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-sm hover:border-orange-500 hover:bg-orange-900/10 transition-all bg-transparent cursor-pointer">
+              className="px-6 py-3 rounded-full border border-white/30 text-white font-semibold text-sm hover:border-orange-500 hover:bg-orange-900/20 transition-all bg-white/5 backdrop-blur-sm cursor-pointer">
               Get Quote
             </button>
           </div>
 
           {/* Stats */}
-          <div className="hero-actions grid grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/10">
+          <div className="hero-actions grid grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/20">
             {[
               { num: "200+", label: "Products" },
               { num: "99%", label: "Satisfaction" },
@@ -69,7 +93,7 @@ export default function Hero() {
                 <div className="font-black text-white" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(1.25rem, 4vw, 1.75rem)" }}>
                   {s.num}
                 </div>
-                <div className="text-slate-500 uppercase tracking-widest mt-0.5" style={{ fontSize: "clamp(0.6rem, 1.5vw, 0.75rem)" }}>
+                <div className="text-slate-300 uppercase tracking-widest mt-0.5" style={{ fontSize: "clamp(0.6rem, 1.5vw, 0.75rem)" }}>
                   {s.label}
                 </div>
               </div>
@@ -79,8 +103,8 @@ export default function Hero() {
 
         {/* Cards — hidden on mobile */}
         <div className="hero-cards hidden lg:grid gap-4">
-          <div className="rounded-3xl p-6 border border-white/10"
-            style={{ background: "linear-gradient(135deg, rgba(194,69,12,.22), rgba(146,64,14,.08))" }}>
+          <div className="rounded-3xl p-6 border border-white/10 backdrop-blur-sm"
+            style={{ background: "linear-gradient(135deg, rgba(194,69,12,.35), rgba(146,64,14,.15))" }}>
             <div className="flex gap-2">
               <Rocket className="w-6 h-6 text-yellow-500" />
               <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
@@ -89,7 +113,7 @@ export default function Hero() {
             </div>
             <p className="text-orange-100/80 text-sm leading-relaxed">On-time nationwide shipping for all orders across the Philippines.</p>
           </div>
-          <div className="rounded-3xl overflow-hidden border border-white/10 h-[400px]">
+          <div className="rounded-3xl overflow-hidden border border-white/10 h-[400px] bg-black/20 backdrop-blur-sm">
             <Canvas camera={{ position: [0, 1, 5], fov: 50 }}>
               <ambientLight intensity={1.5} />
               <directionalLight position={[5, 5, 5]} intensity={2} />
@@ -108,13 +132,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator — hidden on very small screens */}
+      {/* Scroll indicator */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-slate-500 transition-opacity duration-500 ${hidden ? "opacity-0" : "opacity-100"
-          }`}
-      >
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-slate-300 transition-opacity duration-500 ${hidden ? "opacity-0" : "opacity-100"}`}>
         <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-slate-500 to-transparent" />
+        <div className="w-px h-10 bg-gradient-to-b from-slate-300 to-transparent" />
       </div>
     </section>
   );

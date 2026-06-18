@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Brands from "./components/Brands";
 import About from "./components/About";
 import Shop from "./components/Shop";
 import Blog from "./components/Blog";
-// import News        from "./components/News";
+import News from "./components/News";
 // import Gallery     from "./components/Gallery";
 import Careers from "./components/Careers";
 import Contact from "./components/Contact";
@@ -30,13 +31,14 @@ function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Shop />
-      <Blog />
-      {/* <News />
-      <Gallery /> */}
-      <Careers />
+      <Brands />
+      {/* <Shop /> */}
+      {/* <Blog /> */}
+      <News />
+      {/* <Gallery /> */}
       <Contact />
+      <Careers />
+      <About />
     </>
   );
 }

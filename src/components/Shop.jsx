@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Search, X, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { products, brandColors } from "../data/products";
 
-const brands = ["All", "AEROPAK", "AUTOGREEN", "BLAUPUNKT", "JTC", "LUBRIGOLD", "MICHIBA", "ORELUBE", "SAFEWAY", "SILOCK", "WHIZ"];
+const brands = ["All", "AEROPAK", "AUTOGREEN", "BLAUPUNKT", "LUBRIGOLD", "MICHIBA", "ORELUBE", "SAFEWAY", "SILOCK", "WHIZ"];
 const categories = ["All", "Automotive", "Motorcycle", "Household", "Industrial"];
 
 const ITEMS_PER_PAGE = 12;

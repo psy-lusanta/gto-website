@@ -65,20 +65,13 @@ img  { max-width: 100%; }
   background: #e88c3a;
 }
 
-/* Navbar Marquee */
-.ticker-track {
-  display: inline-flex;
-  width: max-content;
-  animation: marquee 20s linear infinite;
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-25%);
-  }
+@keyframes marqueeRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 /* Products */
