@@ -62,7 +62,9 @@ export default function Hero() {
 
           <h1 className="hero-h1 font-black leading-none tracking-tight text-white mb-5"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2.5rem, 8vw, 5rem)" }}>
-            Drive <em className="text-yellow-500 not-italic">performance</em> with premium car products.
+            <em className="text-yellow-500 not-italic">G</em>EARING <br />
+            <em className="text-yellow-500 not-italic">T</em>OWARDS <br />
+            <em className="text-yellow-500 not-italic">O</em>UTCOME <br />
           </h1>
 
           <p className="hero-p text-slate-300 leading-relaxed mb-8"
