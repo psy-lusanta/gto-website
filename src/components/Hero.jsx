@@ -3,7 +3,7 @@ import { Rocket } from "lucide-react";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Suspense } from 'react';
-import Model from '../animation/Model';
+// import Model from '../animation/Model';
 
 export default function Hero() {
   const [hidden, setHidden] = useState(false);
@@ -69,7 +69,7 @@ export default function Hero() {
         style={{ background: "linear-gradient(to bottom, transparent, #08070a)" }} />
 
       <div className="relative max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
-
+{/* 
         <div>
           <span className="hero-h1 block mb-3 text-xs font-bold tracking-[.2em] uppercase text-yellow-500"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
@@ -93,7 +93,7 @@ export default function Hero() {
             style={{ fontSize: "clamp(0.875rem, 2.5vw, 1rem)" }}>
             Discover trusted components, accessories, and expert support for every vehicle brand across the Philippines.
           </p>
-          {/* 
+          
           <div className="hero-actions flex flex-wrap gap-3">
             <button onClick={() => document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" })}
               className="btn-glow px-6 py-3 rounded-full bg-gradient-to-r from-orange-700 to-orange-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform border-none cursor-pointer">
@@ -103,7 +103,7 @@ export default function Hero() {
               className="px-6 py-3 rounded-full border border-white/30 text-white font-semibold text-sm hover:border-orange-500 hover:bg-orange-900/20 transition-all bg-white/5 backdrop-blur-sm cursor-pointer">
               Get Quote
             </button>
-          </div> */}
+          </div>
 
           <div className="hero-actions grid grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/20">
             {[
@@ -122,20 +122,10 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="hero-cards hidden lg:grid gap-4">
-          <div className="rounded-3xl p-6 border border-white/10 backdrop-blur-sm"
-            style={{ background: "linear-gradient(135deg, rgba(194,69,12,.35), rgba(146,64,14,.15))" }}>
-            <div className="flex gap-2">
-              <Rocket className="w-6 h-6 text-yellow-500" />
-              <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                Fast Delivery
-              </h3>
-            </div>
-            <p className="text-orange-100/80 text-sm leading-relaxed">On-time nationwide shipping for all orders across the Philippines.</p>
-          </div>
-          <div className="rounded-3xl overflow-hidden border border-white/10 h-[400px] bg-black/20 backdrop-blur-sm">
+          {/* <div className="rounded-3xl overflow-hidden border border-white/10 h-[400px] bg-black/20 backdrop-blur-sm">
             <Canvas camera={{ position: [0, 1, 5], fov: 50 }}>
               <ambientLight intensity={1.5} />
               <directionalLight position={[5, 5, 5]} intensity={2} />
@@ -144,7 +134,7 @@ export default function Hero() {
               </Suspense>
               <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={5} />
             </Canvas>
-          </div>
+          </div> */}
         </div>
       </div>
 

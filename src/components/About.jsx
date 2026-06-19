@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Scale, Leaf, Heart, Landmark, BowArrow, Rocket, Compass } from "lucide-react";
+import { Scale, Leaf, Heart, Landmark, BowArrow, Rocket, Compass, ExternalLink } from "lucide-react";
 
 const timeline = [
   { decade: "1970s", color: "from-orange-700 to-orange-500", events: ["Metro Manila Automotive Sales was founded in 1972, conquering the VIZMIN market on take-off.", "First brands carried: Whiz, Gold Eagle, KNW, Hella, Plastic Coat and Orelube."] },
@@ -9,10 +9,10 @@ const timeline = [
 ];
 
 const values = [
-  { icon: Scale,    title: "Professionalism",    desc: "We uphold integrity, accountability, and excellence." },
-  { icon: Leaf,     title: "Responsibility",     desc: "We act as a committed and responsible organization." },
-  { icon: Heart,    title: "Customer-centricity",desc: "Our partners are at the heart of everything we do." },
-  { icon: Landmark, title: "Legacy",             desc: "We build sustainable growth grounded in our history." },
+  { icon: Scale, title: "Professionalism", desc: "We uphold integrity, accountability, and excellence." },
+  { icon: Leaf, title: "Responsibility", desc: "We act as a committed and responsible organization." },
+  { icon: Heart, title: "Customer-centricity", desc: "Our partners are at the heart of everything we do." },
+  { icon: Landmark, title: "Legacy", desc: "We build sustainable growth grounded in our history." },
 ];
 
 export default function About() {
@@ -68,9 +68,9 @@ export default function About() {
       <div className="bg-white/60 dark:bg-white/[.02] border-y border-[#e8dfc8] dark:border-white/10 py-12">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { num: 6000,  suf: "+", label: "Direct Clients Nationwide" },
-            { num: 50,    suf: "+", label: "Years of Industry Experience" },
-            { num: 10,    suf: "+", label: "Premium Brands Carried" },
+            { num: 6000, suf: "+", label: "Direct Clients Nationwide" },
+            { num: 50, suf: "+", label: "Years of Industry Experience" },
+            { num: 10, suf: "+", label: "Premium Brands Carried" },
             { num: 10000, suf: "+", label: "Products in Stock" },
           ].map((s, i) => (
             <div key={s.label} className="reveal text-center" style={{ transitionDelay: `${i * 0.1}s` }}>
@@ -158,9 +158,8 @@ export default function About() {
           <div className="flex gap-2 mb-8 reveal overflow-x-auto pb-2 scrollbar-none">
             {timeline.map((t, i) => (
               <button key={t.decade} onClick={() => setActiveDecade(i)}
-                className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${
-                  activeDecade === i ? "bg-orange-600 border-orange-600 text-white" : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-orange-500/60 dark:hover:border-orange-600/50 hover:text-orange-600 dark:hover:text-orange-400"
-                }`}
+                className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${activeDecade === i ? "bg-orange-600 border-orange-600 text-white" : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-orange-500/60 dark:hover:border-orange-600/50 hover:text-orange-600 dark:hover:text-orange-400"
+                  }`}
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {t.decade}
               </button>
@@ -218,6 +217,23 @@ export default function About() {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      <div className="border-b border-[#e8dfc8] dark:border-white/10"
+        style={{ background: "linear-gradient(135deg, rgba(194,69,12,.10), rgba(146,64,14,.04))" }}>
+        <div className="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="font-black text-[#1c1505] dark:text-white mb-1"
+              style={{ fontSize: "clamp(1.5rem, 5vw, 1.875rem)", fontFamily: "'Barlow Condensed', sans-serif" }}>
+              Ready to grow your business?
+            </h3>
+            <p className="text-[#6b5d3f] dark:text-slate-400 text-sm">Become a GTO reseller and get access to our full product lineup.</p>
+          </div>
+          <a href="https://gtotrading.com.ph/become-a-seller" target="_blank" rel="noreferrer"
+            className="shrink-0 flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-orange-700 to-orange-400 text-white font-bold text-sm hover:-translate-y-0.5 transition-transform no-underline">
+            Become a Reseller <ExternalLink size={14} />
+          </a>
         </div>
       </div>
     </section>

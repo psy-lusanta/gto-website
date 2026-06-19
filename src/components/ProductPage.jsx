@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 import { ArrowLeft, Phone, Mail } from "lucide-react";
 import { products, brandColors } from "../data/products";
 
@@ -14,7 +15,7 @@ export default function ProductPage() {
     if (!product) return (
         <div className="min-h-screen flex items-center justify-center text-white">
             <div className="text-center">
-                <p className="text-6xl mb-4">🔍</p>
+                <p className="text-6xl mb-4"><FaSearch /></p>
                 <p className="text-xl font-bold mb-4">Product not found</p>
                 <Link to="/" className="text-orange-400 hover:underline">← Back to Shop</Link>
             </div>
@@ -62,12 +63,28 @@ export default function ProductPage() {
                                     }, 100);
                                 }}
                                 className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-orange-700 to-orange-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
-                                <Mail size={16} /> Inquire Now
+                                <Mail size={16} /> Shopee
                             </button>
-                            <a href="tel:+63287118005"
-                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-white/20 text-white font-semibold text-sm hover:border-orange-500 hover:bg-orange-900/10 transition-all">
-                                <Phone size={16} /> Call Us
-                            </a>
+                            <button
+                                onClick={() => {
+                                    navigate("/");
+                                    setTimeout(() => {
+                                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                                    }, 100);
+                                }}
+                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-orange-700 to-orange-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
+                                <Mail size={16} /> Lazada
+                            </button>
+                            <button
+                                onClick={() => {
+                                    navigate("/");
+                                    setTimeout(() => {
+                                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                                    }, 100);
+                                }}
+                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-orange-700 to-orange-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
+                                <Mail size={16} /> Tiktok
+                            </button>
                         </div>
 
                         <div className="mt-8 p-5 bg-white/5 border border-white/10 rounded-2xl">
