@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Scale, Leaf, Heart, Landmark, BowArrow, Rocket, Compass, ExternalLink } from "lucide-react";
 
 const timeline = [
-  { decade: "1970s", color: "from-orange-700 to-orange-500", events: ["Metro Manila Automotive Sales was founded in 1972, conquering the VIZMIN market on take-off.", "First brands carried: Whiz, Gold Eagle, KNW, Hella, Plastic Coat and Orelube."] },
-  { decade: "1980s", color: "from-orange-600 to-amber-500", events: ["Company name changes as operations continue to grow.", "Metro Manila Automotive Sales → First Metro → Inter-Island Industrial Sales → Metro Gold → Gold Rush."] },
+  { decade: "1970s", color: "from-yellow-700 to-yellow-500", events: ["Metro Manila Automotive Sales was founded in 1972, conquering the VIZMIN market on take-off.", "First brands carried: Whiz, Gold Eagle, KNW, Hella, Plastic Coat and Orelube."] },
+  { decade: "1980s", color: "from-yellow-600 to-amber-500", events: ["Company name changes as operations continue to grow.", "Metro Manila Automotive Sales → First Metro → Inter-Island Industrial Sales → Metro Gold → Gold Rush."] },
   { decade: "1990s", color: "from-amber-600 to-yellow-500", events: ["Kabignayan St. in Banawe became the new home for Gold Rush.", "Became an avid affiliate of the Association of Philippine Volunteer Fire Brigades, Inc."] },
-  { decade: "2000s", color: "from-orange-700 to-orange-400", events: ["On July 5, 2012, Gran Toro Oro Trading was officially registered.", "Prominent brands joined: Repsol, Aeropak, Lubrigold, Safeway, JTC, Silock, Osram, Michiba, Blaupunkt.", "Business Support Team launched — focusing on Tele Sales and E-commerce."] },
+  { decade: "2000s", color: "from-yellow-700 to-yellow-400", events: ["On July 5, 2012, Gran Toro Oro Trading was officially registered.", "Prominent brands joined: Repsol, Aeropak, Lubrigold, Safeway, JTC, Silock, Osram, Michiba, Blaupunkt.", "Business Support Team launched — focusing on Tele Sales and E-commerce."] },
 ];
 
 const values = [
@@ -104,12 +104,12 @@ export default function About() {
       <div className="py-16 sm:py-24 max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-          <div className="reveal relative rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#e8dfc8] dark:border-white/10 overflow-hidden group hover:border-orange-500/50 dark:hover:border-orange-600/30 transition-all duration-500"
+          <div className="reveal relative rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#e8dfc8] dark:border-white/10 overflow-hidden group hover:border-yellow-500/50 dark:hover:border-yellow-600/30 transition-all duration-500"
             style={{ background: "linear-gradient(135deg, rgba(194,69,12,.06), rgba(255,255,255,0))" }}>
-            <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-orange-600/10 blur-3xl pointer-events-none" />
+            <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-yellow-600/10 blur-3xl pointer-events-none" />
             <div className="relative">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-orange-100 dark:bg-orange-600/20 border border-orange-300 dark:border-orange-600/30 flex items-center justify-center mb-5">
-                <BowArrow size={20} className="text-orange-600 dark:text-orange-500" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-yellow-100 dark:bg-yellow-600/20 border border-yellow-300 dark:border-yellow-600/30 flex items-center justify-center mb-5">
+                <BowArrow size={20} className="text-yellow-600 dark:text-yellow-500" />
               </div>
               <h3 className="font-black text-2xl sm:text-3xl text-[#1c1505] dark:text-white mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Vision</h3>
               <p className="text-[#3f3522] dark:text-slate-400 leading-relaxed text-sm sm:text-base">
@@ -118,21 +118,21 @@ export default function About() {
             </div>
           </div>
 
-          <div className="reveal-right relative rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#e8dfc8] dark:border-white/10 overflow-hidden group hover:border-orange-500/50 dark:hover:border-orange-600/30 transition-all duration-500"
-            style={{ background: "linear-gradient(135deg, rgba(146,64,14,.05), rgba(255,255,255,0))" }}>
-            <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-orange-800/10 blur-3xl pointer-events-none" />
+          <div className="reveal-right relative rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#e8dfc8] dark:border-white/10 overflow-hidden group hover:border-yellow-500/50 dark:hover:border-yellow-600/30 transition-all duration-500"
+            style={{ background: "linear-gradient(135deg, rgba(194,69,12,.06), rgba(255,255,255,0))" }}>
+            <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-yellow-800/10 blur-3xl pointer-events-none" />
             <div className="relative">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-orange-100 dark:bg-orange-600/20 border border-orange-300 dark:border-orange-600/30 flex items-center justify-center mb-5">
-                <Rocket size={20} className="text-orange-600 dark:text-orange-500" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-yellow-100 dark:bg-yellow-600/20 border border-yellow-300 dark:border-yellow-600/30 flex items-center justify-center mb-5">
+                <Rocket size={20} className="text-yellow-600 dark:text-yellow-500" />
               </div>
               <h3 className="font-black text-2xl sm:text-3xl text-[#1c1505] dark:text-white mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Mission</h3>
               <p className="text-[#3f3522] dark:text-slate-400 leading-relaxed mb-3 text-sm sm:text-base">
-                <span className="text-orange-600 dark:text-orange-400 font-bold">Gearing Towards Outcomes</span>
+                <span className="text-yellow-600 dark:text-yellow-400 font-bold">Gearing Towards Outcomes</span>
               </p>
               <ul className="space-y-2">
                 {["Deliver solutions and quality products that help partners stay competitive", "Bridge globally trusted brands into the Philippine market.", "Build long-term relationships that go beyond expectations"].map((m, i) => (
                   <li key={i} className="flex items-start gap-3 text-[#3f3522] dark:text-slate-400 text-sm">
-                    <span className="text-orange-600 dark:text-orange-500 mt-0.5 shrink-0 font-bold">→</span>{m}
+                    <span className="text-yellow-600 dark:text-yellow-500 mt-0.5 shrink-0 font-bold">→</span>{m}
                   </li>
                 ))}
               </ul>
@@ -146,9 +146,9 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10 reveal">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-orange-600" />
-              <span className="text-xs font-bold tracking-[.2em] uppercase text-orange-600 dark:text-orange-500" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our History</span>
-              <div className="w-8 h-px bg-orange-600" />
+              <div className="w-8 h-px bg-yellow-600" />
+              <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our History</span>
+              <div className="w-8 h-px bg-yellow-600" />
             </div>
             <h2 className="font-black text-[#1c1505] dark:text-white leading-none" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3rem)" }}>
               Over 50 Years of Growth
@@ -158,7 +158,7 @@ export default function About() {
           <div className="flex gap-2 mb-8 reveal overflow-x-auto pb-2 scrollbar-none">
             {timeline.map((t, i) => (
               <button key={t.decade} onClick={() => setActiveDecade(i)}
-                className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${activeDecade === i ? "bg-orange-600 border-orange-600 text-white" : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-orange-500/60 dark:hover:border-orange-600/50 hover:text-orange-600 dark:hover:text-orange-400"
+                className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${activeDecade === i ? "bg-yellow-600 border-yellow-600 text-white" : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500/60 dark:hover:border-yellow-600/50 hover:text-yellow-600 dark:hover:text-yellow-400"
                   }`}
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 {t.decade}
@@ -177,7 +177,7 @@ export default function About() {
                 <ul className="space-y-4">
                   {timeline[activeDecade].events.map((ev, i) => (
                     <li key={i} className="flex items-start gap-4">
-                      <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 shrink-0" />
+                      <div className="w-2 h-2 rounded-full bg-yellow-500 mt-2 shrink-0" />
                       <p className="text-[#3f3522] dark:text-slate-300 leading-relaxed text-sm sm:text-base">{ev}</p>
                     </li>
                   ))}
@@ -192,9 +192,9 @@ export default function About() {
       <div className="py-16 sm:py-24 max-w-6xl mx-auto px-4">
         <div className="text-center mb-10 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-orange-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-orange-600 dark:text-orange-500" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Values</span>
-            <div className="w-8 h-px bg-orange-600" />
+            <div className="w-8 h-px bg-yellow-600" />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Values</span>
+            <div className="w-8 h-px bg-yellow-600" />
           </div>
           <h2 className="font-black text-[#1c1505] dark:text-white leading-none" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3rem)" }}>
             What We Stand For
@@ -205,12 +205,12 @@ export default function About() {
             const Icon = v.icon;
             return (
               <div key={v.title}
-                className="reveal group bg-white dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-2xl p-5 sm:p-6 hover:border-orange-500/50 dark:hover:border-orange-600/40 hover:-translate-y-1 transition-all duration-300 shadow-sm dark:shadow-none"
+                className="reveal group bg-white dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-2xl p-5 sm:p-6 hover:border-yellow-500/50 dark:hover:border-yellow-600/40 hover:-translate-y-1 transition-all duration-300 shadow-sm dark:shadow-none"
                 style={{ transitionDelay: `${i * 0.08}s` }}>
                 <div className="mb-4">
-                  <Icon size={32} className="text-orange-600 dark:text-orange-500 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors" />
+                  <Icon size={32} className="text-yellow-600 dark:text-yellow-500 group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition-colors" />
                 </div>
-                <h4 className="font-black text-base sm:text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                <h4 className="font-black text-base sm:text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   {v.title}
                 </h4>
                 <p className="text-[#6b5d3f] dark:text-slate-500 text-xs sm:text-sm leading-relaxed">{v.desc}</p>
@@ -231,7 +231,7 @@ export default function About() {
             <p className="text-[#6b5d3f] dark:text-slate-400 text-sm">Become a GTO reseller and get access to our full product lineup.</p>
           </div>
           <a href="https://gtotrading.com.ph/become-a-seller" target="_blank" rel="noreferrer"
-            className="shrink-0 flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-orange-700 to-orange-400 text-white font-bold text-sm hover:-translate-y-0.5 transition-transform no-underline">
+            className="shrink-0 flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-yellow-700 to-yellow-400 text-white font-bold text-sm hover:-translate-y-0.5 transition-transform no-underline">
             Become a Reseller <ExternalLink size={14} />
           </a>
         </div>

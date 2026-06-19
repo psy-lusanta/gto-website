@@ -60,7 +60,7 @@ export default function Hero() {
         preload="auto"
       />
 
-      <div className="absolute inset-0 bg-[#08070a]/70" />
+      <div className="absolute inset-0 dark:bg-[#08070a]/70 " />
 
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 70% 60% at 30% 40%, rgba(194,69,12,.25), transparent 60%), radial-gradient(ellipse 50% 50% at 75% 65%, rgba(232,140,58,.1), transparent 55%)" }} />

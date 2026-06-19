@@ -29,16 +29,16 @@ export default function BrandsMarquee() {
 
         <div className="text-center mb-12 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-orange-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-orange-600 dark:text-orange-500"
+            <div className="w-8 h-px bg-yellow-600" />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Trusted Brands
             </span>
-            <div className="w-8 h-px bg-orange-600" />
+            <div className="w-8 h-px bg-yellow-600" />
           </div>
           <h2 className="font-black text-[#1c1505] dark:text-white leading-none mb-3"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3.5rem)" }}>
-            Brands We <em className="text-orange-600 dark:text-orange-500 not-italic">Carry</em>
+            Brands We <em className="text-yellow-600 dark:text-yellow-500 not-italic">Carry</em>
           </h2>
           <p className="text-[#6b5d3f] dark:text-slate-400 max-w-xl mx-auto leading-relaxed text-sm sm:text-base">
             We proudly distribute internationally recognized automotive and motorcycle brands across the Philippines.
@@ -60,7 +60,7 @@ export default function BrandsMarquee() {
         <div className="flex w-max" style={{ animation: "marqueeLeft 28s linear infinite" }}>
           {marqueeLogos.map((b, i) => (
             <div key={`row1-${i}`}
-              className="flex items-center justify-center mx-4 sm:mx-6 shrink-0 bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-12 py-5 sm:py-8 hover:border-orange-500/60 dark:hover:border-orange-600/40 hover:bg-orange-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none">
+              className="flex items-center justify-center mx-4 sm:mx-6 shrink-0 bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-12 py-5 sm:py-8 hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:bg-yellow-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none">
               {/* ── LOGO SIZE: change h-10 (mobile) and sm:h-16 (desktop) ── */}
               <img src={b.img} alt={b.name} className="h-10 sm:h-16 w-auto object-contain" />
             </div>
@@ -82,7 +82,7 @@ export default function BrandsMarquee() {
         <div className="flex w-max" style={{ animation: "marqueeRight 32s linear infinite" }}>
           {[...marqueeLogos].reverse().map((b, i) => (
             <div key={`row2-${i}`}
-              className="flex items-center justify-center mx-4 sm:mx-6 shrink-0 bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-12 py-5 sm:py-8 hover:border-orange-500/60 dark:hover:border-orange-600/40 hover:bg-orange-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none">
+              className="flex items-center justify-center mx-4 sm:mx-6 shrink-0 bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-12 py-5 sm:py-8 hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:bg-yellow-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none">
               {/* ── LOGO SIZE: change h-10 (mobile) and sm:h-16 (desktop) ── */}
               <img src={b.img} alt={b.name} className="h-10 sm:h-16 w-auto object-contain" />
             </div>

@@ -60,8 +60,8 @@ export default function Shop() {
       {/* Header */}
       <div className="max-w-6xl mx-auto px-5 mb-12">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-8 h-px bg-orange-600" />
-          <span className="text-xs font-bold tracking-[.2em] uppercase text-orange-600 dark:text-orange-500"
+          <div className="w-8 h-px bg-yellow-600" />
+          <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             Our Products
           </span>
@@ -70,9 +70,9 @@ export default function Shop() {
           <h2 className="font-black text-5xl sm:text-6xl text-[#1c1505] dark:text-white leading-none"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             {activeBrand !== "All" ? (
-              <>{activeBrand} <em className="text-orange-500 not-italic">Products</em></>
+              <>{activeBrand} <em className="text-yellow-500 not-italic">Products</em></>
             ) : (
-              <>Shop All <em className="text-orange-500 not-italic">Products</em></>
+              <>Shop All <em className="text-yellow-500 not-italic">Products</em></>
             )}
           </h2>
           <p className="text-[#9a8a64] dark:text-slate-500 text-sm">{filtered.length} products found</p>
@@ -127,7 +127,7 @@ export default function Shop() {
                   <button key={b} onClick={() => handleBrand(b)}
                     className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${
                       activeBrand === b
-                        ? "bg-orange-600 text-white font-semibold"
+                        ? "bg-yellow-600 text-white font-semibold"
                         : "text-[#6b5d3f] dark:text-slate-400 hover:text-[#1c1505] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
                     }`}>
                     {b}
@@ -144,7 +144,7 @@ export default function Shop() {
                   <button key={c} onClick={() => handleCat(c)}
                     className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${
                       activeCategory === c
-                        ? "bg-orange-600 text-white font-semibold"
+                        ? "bg-yellow-600 text-white font-semibold"
                         : "text-[#6b5d3f] dark:text-slate-400 hover:text-[#1c1505] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
                     }`}>
                     {c}
@@ -186,11 +186,11 @@ export default function Shop() {
                   </div>
 
                   <div className="p-3">
-                    <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full border mb-2 ${brandColors[p.brand] || "bg-orange-500/20 text-orange-600 border-orange-500/30"}`}>
+                    <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full border mb-2 ${brandColors[p.brand] || "bg-yellow-500/20 text-yellow-600 border-yellow-500/30"}`}>
                       {p.brand}
                     </span>
                     <p className="text-[#1c1505] dark:text-white text-sm font-medium leading-snug line-clamp-2 mb-2">{p.name}</p>
-                    <p className="text-orange-600 dark:text-orange-400 font-black text-base" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                    <p className="text-yellow-600 dark:text-yellow-400 font-black text-base" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                       ₱{p.price.toLocaleString()}
                     </p>
                   </div>
@@ -210,14 +210,14 @@ export default function Shop() {
                 <button key={n} onClick={() => setPage(n)}
                   className={`w-9 h-9 rounded-lg text-sm font-medium transition-all ${
                     page === n
-                      ? "bg-orange-600 text-white"
-                      : "bg-black/5 dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 text-[#6b5d3f] dark:text-slate-400 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400"
+                      ? "bg-yellow-600 text-white"
+                      : "bg-black/5 dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500 hover:text-yellow-600 dark:hover:text-yellow-400"
                   }`}>
                   {n}
                 </button>
               ))}
               <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages}
-                className="px-4 py-2 rounded-lg bg-black/5 dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 text-[#6b5d3f] dark:text-slate-400 text-sm hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+                className="px-4 py-2 rounded-lg bg-black/5 dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 text-[#6b5d3f] dark:text-slate-400 text-sm hover:border-yellow-500 hover:text-yellow-600 dark:hover:text-yellow-400 transition-all disabled:opacity-30 disabled:cursor-not-allowed">
                 Next →
           </button>
             </div>

@@ -11,16 +11,16 @@ export default function News() {
 
         <div className="text-center mb-12 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-orange-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-orange-600 dark:text-orange-500"
+            <div className="w-8 h-px bg-yellow-600" />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Stay Updated
             </span>
-            <div className="w-8 h-px bg-orange-600" />
+            <div className="w-8 h-px bg-yellow-600" />
           </div>
           <h2 className="font-black text-[#1c1505] dark:text-white leading-none mb-3"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3.5rem)" }}>
-            Latest <em className="text-orange-600 dark:text-orange-500 not-italic">News</em>
+            <em className="text-yellow-600 dark:text-yellow-500 not-italic">News</em> and <em className="text-yellow-600 dark:text-yellow-500 not-italic">Events</em>
           </h2>
           <p className="text-[#6b5d3f] dark:text-slate-400 max-w-xl mx-auto leading-relaxed text-sm sm:text-base">
             Company announcements, product launches, and updates from GTO Trading.
@@ -31,7 +31,7 @@ export default function News() {
           {newsData.map((n, i) => (
             <div key={n.id}
               onClick={() => setSelected(n)}
-              className="reveal group bg-white dark:bg-white/[.03] border border-[#e8dfc8] dark:border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-orange-500/60 dark:hover:border-orange-600/40 hover:-translate-y-1 transition-all duration-300 shadow-sm dark:shadow-none"
+              className="reveal group bg-white dark:bg-white/[.03] border border-[#e8dfc8] dark:border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:-translate-y-1 transition-all duration-300 shadow-sm dark:shadow-none"
               style={{ transitionDelay: `${i * 0.06}s` }}>
 
               <div className="relative overflow-hidden">
@@ -44,12 +44,12 @@ export default function News() {
                 <span className="flex items-center gap-1.5 text-[#9a8a64] dark:text-slate-500 text-xs mb-2">
                   <Calendar size={11} /> {n.date}
                 </span>
-                <h3 className="font-black text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors line-clamp-2"
+                <h3 className="font-black text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors line-clamp-2"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   {n.title}
                 </h3>
                 <p className="text-[#6b5d3f] dark:text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">{n.excerpt}</p>
-                <div className="inline-flex items-center gap-1.5 text-orange-600 dark:text-orange-400 font-semibold text-sm group-hover:gap-2.5 transition-all">
+                <div className="inline-flex items-center gap-1.5 text-yellow-600 dark:text-yellow-400 font-semibold text-sm group-hover:gap-2.5 transition-all">
                   Read More <ArrowRight size={14} />
                 </div>
               </div>

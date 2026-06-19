@@ -70,19 +70,19 @@ export default function Footer() {
             <p className="text-xs font-bold tracking-[.2em] uppercase text-[#9a8a64] dark:text-slate-500 mb-4">Contact</p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <MapPin size={14} className="text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
+                <MapPin size={14} className="text-yellow-600 dark:text-yellow-500 mt-0.5 shrink-0" />
                 <span>#12 Kabignayan St., Doña Josefa, Quezon City</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <Phone size={14} className="text-orange-600 dark:text-orange-500 shrink-0" />
+                <Phone size={14} className="text-yellow-600 dark:text-yellow-500 shrink-0" />
                 <span>(02) 8-7118005 | 09688996697</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <Mail size={14} className="text-orange-600 dark:text-orange-500 shrink-0" />
+                <Mail size={14} className="text-yellow-600 dark:text-yellow-500 shrink-0" />
                 <span>info@gtotrading.com.ph</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <Clock size={14} className="text-orange-600 dark:text-orange-500 shrink-0" />
+                <Clock size={14} className="text-yellow-600 dark:text-yellow-500 shrink-0" />
                 <span>Mon–Sat, 7:00 AM – 5:00 PM</span>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Footer() {
               {quickLinks.map(l => (
                 <li key={l.label}>
                   <button onClick={() => { navigate(l.path); window.scrollTo(0, 0); }}
-                    className="text-sm text-[#6b5d3f] dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors bg-transparent border-none cursor-pointer p-0 text-left">
+                    className="text-sm text-[#6b5d3f] dark:text-slate-400 hover:text-yellow-600 dark:hover:text-yellow-500 transition-colors bg-transparent border-none cursor-pointer p-0 text-left">
                     {l.label}
                   </button>
                 </li>
@@ -111,12 +111,12 @@ export default function Footer() {
                 <li key={l.label}>
                   {l.href ? (
                     <a href={l.href} target="_blank" rel="noreferrer"
-                      className="text-sm text-[#6b5d3f] dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors no-underline">
+                      className="text-sm text-[#6b5d3f] dark:text-slate-400 hover:text-yellow-600 dark:hover:text-yellow-500 transition-colors no-underline">
                       {l.label}
                     </a>
                   ) : (
                     <button onClick={() => { navigate(l.path); window.scrollTo(0, 0); }}
-                      className="text-sm text-[#6b5d3f] dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors bg-transparent border-none cursor-pointer p-0 text-left">
+                      className="text-sm text-[#6b5d3f] dark:text-slate-400 hover:text-yellow-600 dark:hover:text-yellow-500 transition-colors bg-transparent border-none cursor-pointer p-0 text-left">
                       {l.label}
                     </button>
                   )}

@@ -85,7 +85,7 @@ export default function Navbar() {
                 {/* All Products */}
                 <button
                   onClick={() => { navigate("/shop"); setDdOpen(false); }}
-                  className="w-full text-left px-4 py-3 text-sm font-bold text-orange-600 dark:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors bg-transparent border-none cursor-pointer border-b border-[#e8dfc8] dark:border-white/10">
+                  className="w-full text-left px-4 py-3 text-sm font-bold text-yellow-600 dark:text-yellow-500 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-colors bg-transparent border-none cursor-pointer border-b border-[#e8dfc8] dark:border-white/10">
                   🛒 All Products
                 </button>
 
@@ -94,8 +94,8 @@ export default function Navbar() {
                   {brands.map(b => (
                     <button key={b}
                       onClick={() => { navigate(`/shop?brand=${b}`); setDdOpen(false); }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-[#6b5d3f] dark:text-slate-400 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors bg-transparent border-none cursor-pointer flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
+                      className="w-full text-left px-4 py-2.5 text-sm text-[#6b5d3f] dark:text-slate-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 hover:text-yellow-600 dark:hover:text-yellow-500 transition-colors bg-transparent border-none cursor-pointer flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0" />
                       {b}
                     </button>
                   ))}
@@ -152,13 +152,13 @@ export default function Navbar() {
               <div className="pl-3 flex flex-col border-l-2 border-orange-600/30 dark:border-orange-700/40 ml-3 mb-1">
                 <button
                   onClick={() => { navigate("/shop"); close(); }}
-                  className="text-xs py-2 px-2 text-left font-bold text-orange-600 dark:text-orange-400 bg-transparent border-none cursor-pointer w-full">
+                  className="text-xs py-2 px-2 text-left font-bold text-yellow-600 dark:text-yellow-500 bg-transparent border-none cursor-pointer w-full">
                   🛒 All Products
                 </button>
                 {brands.map(b => (
                   <button key={b}
                     onClick={() => { navigate(`/shop?brand=${b}`); close(); }}
-                    className="text-xs py-2 px-2 text-left text-[#9a8a64] dark:text-slate-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors bg-transparent border-none cursor-pointer w-full">
+                    className="text-xs py-2 px-2 text-left text-[#9a8a64] dark:text-slate-500 hover:text-yellow-600 dark:hover:text-yellow-500 transition-colors bg-transparent border-none cursor-pointer w-full">
                     {b}
                   </button>
                 ))}
@@ -173,7 +173,7 @@ export default function Navbar() {
             ))}
 
             <button
-              className="flex items-center gap-2 py-2.5 px-3 mt-1 text-sm text-left font-semibold text-orange-600 dark:text-orange-400 hover:bg-orange-50 dark:hover:bg-white/5 rounded-lg transition-all bg-transparent border-none cursor-pointer w-full border-t border-[#e8dfc8] dark:border-white/10 pt-4">
+              className="flex items-center gap-2 py-2.5 px-3 mt-1 text-sm text-left font-semibold text-yellow-600 dark:text-yellow-500 hover:bg-yellow-50 dark:hover:bg-white/5 rounded-lg transition-all bg-transparent border-none cursor-pointer w-full border-t border-[#e8dfc8] dark:border-white/10 pt-4">
               <LogIn size={15} />
               Login
             </button>
