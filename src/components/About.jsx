@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 import { Scale, Leaf, Heart, Landmark, BowArrow, Rocket, Compass, ExternalLink } from "lucide-react";
 
 const timeline = [
@@ -17,6 +18,7 @@ const values = [
 
 export default function About() {
   const [activeDecade, setActiveDecade] = useState(0);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const els = document.querySelectorAll(".counter[data-target]");
@@ -157,10 +159,17 @@ export default function About() {
 
           <div className="flex gap-2 mb-8 reveal overflow-x-auto pb-2 scrollbar-none">
             {timeline.map((t, i) => (
-              <button key={t.decade} onClick={() => setActiveDecade(i)}
-                className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${activeDecade === i ? "bg-yellow-600 border-yellow-600 text-white" : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500/60 dark:hover:border-yellow-600/50 hover:text-yellow-600 dark:hover:text-yellow-400"
+              <button
+                key={t.decade}
+                onClick={() => setActiveDecade(i)}
+                className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${activeDecade === i
+                    ? theme === "dark"
+                      ? "bg-yellow-600 border-yellow-600 text-white"
+                      : "bg-yellow-600 border-yellow-600 text-white"
+                    : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500/60 dark:hover:border-yellow-600/50 hover:text-yellow-600 dark:hover:text-yellow-400"
                   }`}
-                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
                 {t.decade}
               </button>
             ))}
@@ -171,7 +180,7 @@ export default function About() {
               style={{ background: undefined }}>
               <div className={`absolute top-0 left-0 w-1.5 h-full rounded-l-3xl bg-gradient-to-b ${timeline[activeDecade].color}`} />
               <div className="pl-4">
-                <h3 className="font-black text-[#1c1505]/5 dark:text-white/10 mb-4 leading-none" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(3rem, 10vw, 5rem)" }}>
+                <h3 className="font-black text-black/60 dark:text-white mb-4 leading-none" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(3rem, 10vw, 5rem)" }}>
                   {timeline[activeDecade].decade}
                 </h3>
                 <ul className="space-y-4">

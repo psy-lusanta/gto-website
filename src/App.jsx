@@ -26,7 +26,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/"                     element={<Home />} />
-          {/* <Route path="/brands"               element={<BrandsPage />} /> */}
+          {/* <Route path="/brands"           element={<BrandsPage />} /> */}
           <Route path="/shop"                 element={<ShopPage />} />
           <Route path="/news"                 element={<NewsPage />} />
           <Route path="/contact"              element={<ContactPage />} />
@@ -34,10 +34,10 @@ export default function App() {
           <Route path="/about"                element={<AboutPage />} />
           <Route path="/product/:id"          element={<ProductPage />} />
           <Route path="/blog/:id/:slug"       element={<BlogPage />} />
-          <Route path="/terms-and-conditions" element={<PolicyPage />} />
-          <Route path="/privacy-policy"       element={<PolicyPage />} />
-          <Route path="/refund-policy"        element={<PolicyPage />} />
-          <Route path="/faq"                  element={<PolicyPage />} />
+          <Route path="/:slug"                element={<PolicyPage />} />
+          <Route path="/:slug"                element={<PolicyPage />} />
+          <Route path="/:slug"                element={<PolicyPage />} />
+          <Route path="/:slug"                element={<PolicyPage />} />
         </Routes>
       </main>
       <Footer />

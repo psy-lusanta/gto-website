@@ -21,16 +21,16 @@ export default function Contact() {
 
         <div className="text-center mb-16 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-orange-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-orange-600 dark:text-orange-500"
+            <div className="w-8 h-px bg-yellow-600" />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Get In Touch
             </span>
-            <div className="w-8 h-px bg-orange-600" />
+            <div className="w-8 h-px bg-yellow-600" />
           </div>
           <h2 className="font-black text-5xl sm:text-6xl lg:text-7xl text-[#1c1505] dark:text-white leading-none mb-4"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-            Contact <em className="text-orange-600 dark:text-orange-500 not-italic">GTO Trading</em>
+            Contact <em className="text-yellow-600 dark:text-yellow-500 not-italic">GTO Trading</em>
           </h2>
           <p className="text-[#6b5d3f] dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
             Have a question about our products, pricing, or becoming a reseller? We'd love to hear from you.
@@ -40,9 +40,9 @@ export default function Contact() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {contactInfo.map((c, i) => (
             <div key={c.label}
-              className="reveal bg-white dark:bg-white/[.03] border border-[#e8dfc8] dark:border-white/10 rounded-2xl p-5 hover:border-orange-500/60 dark:hover:border-orange-600/40 hover:-translate-y-1 transition-all duration-300 group shadow-sm dark:shadow-none"
+              className="reveal bg-white dark:bg-white/[.03] border border-[#e8dfc8] dark:border-white/10 rounded-2xl p-5 hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:-translate-y-1 transition-all duration-300 group shadow-sm dark:shadow-none"
               style={{ transitionDelay: `${i * 0.08}s` }}>
-              <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-600/15 border border-orange-200 dark:border-orange-600/20 flex items-center justify-center text-orange-600 dark:text-orange-400 mb-4 group-hover:bg-orange-200 dark:group-hover:bg-orange-600/25 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-yellow-100 dark:bg-yellow-600/15 border border-yellow-200 dark:border-yellow-600/20 flex items-center justify-center text-yellow-600 dark:text-yellow-400 mb-4 group-hover:bg-yellow-200 dark:group-hover:bg-yellow-600/25 transition-colors">
                 {c.icon}
               </div>
               <p className="text-xs font-bold tracking-widest uppercase text-[#9a8a64] dark:text-slate-500 mb-1">{c.label}</p>
@@ -57,7 +57,7 @@ export default function Contact() {
           <div className="reveal bg-white dark:bg-white/[.03] border border-[#e8dfc8] dark:border-white/10 rounded-3xl p-8 shadow-sm dark:shadow-none">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <CheckCircle size={56} className="text-orange-500 mb-4" />
+                <CheckCircle size={56} className="text-yellow-500 mb-4" />
                 <h3 className="font-black text-3xl text-[#1c1505] dark:text-white mb-2"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   Message Sent!
@@ -66,14 +66,14 @@ export default function Contact() {
                   Thank you for reaching out. Our team will get back to you within 24 hours.
                 </p>
                 <button onClick={() => setSubmitted(false)}
-                  className="mt-6 text-sm text-orange-600 dark:text-orange-400 hover:underline bg-transparent border-none cursor-pointer">
+                  className="mt-6 text-sm text-yellow-600 dark:text-yellow-400 hover:underline bg-transparent border-none cursor-pointer">
                   Send another message
                 </button>
               </div>
             ) : (
               <>
                 <div className="flex items-center gap-3 mb-6">
-                  <MessageSquare size={18} className="text-orange-600 dark:text-orange-500" />
+                  <MessageSquare size={18} className="text-yellow-600 dark:text-yellow-500" />
                   <h3 className="font-black text-2xl text-[#1c1505] dark:text-white"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                     Send Us a Message
@@ -86,13 +86,13 @@ export default function Contact() {
                       <User size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9a8a64] dark:text-slate-500 pointer-events-none" />
                       <input name="name" value={form.name} onChange={handleChange} required
                         placeholder="Full Name"
-                        className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-orange-500 transition-colors" />
+                        className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-yellow-500 transition-colors" />
                     </div>
                     <div className="relative">
                       <Phone size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9a8a64] dark:text-slate-500 pointer-events-none" />
                       <input name="phone" type="tel" value={form.phone} onChange={handleChange}
                         placeholder="Phone Number"
-                        className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-orange-500 transition-colors" />
+                        className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-yellow-500 transition-colors" />
                     </div>
                   </div>
 
@@ -100,19 +100,19 @@ export default function Contact() {
                     <Mail size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9a8a64] dark:text-slate-500 pointer-events-none" />
                     <input name="email" type="email" value={form.email} onChange={handleChange} required
                       placeholder="Email Address"
-                      className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-orange-500 transition-colors" />
+                      className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl pl-10 pr-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-yellow-500 transition-colors" />
                   </div>
 
                   <input name="subject" value={form.subject} onChange={handleChange}
                     placeholder="Subject (e.g. Product Inquiry, Reseller Application)"
-                    className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl px-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-orange-500 transition-colors" />
+                    className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl px-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-yellow-500 transition-colors" />
 
                   <textarea name="message" value={form.message} onChange={handleChange} required rows={5}
                     placeholder="Your message..."
-                    className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl px-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-orange-500 transition-colors resize-none" />
+                    className="w-full bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl px-4 py-3 text-[#1c1505] dark:text-white text-sm placeholder:text-[#9a8a64] dark:placeholder:text-slate-500 outline-none focus:border-yellow-500 transition-colors resize-none" />
 
                   <button type="submit"
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-orange-700 to-orange-400 text-white font-bold text-base border-none cursor-pointer hover:-translate-y-0.5 transition-transform"
+                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-yellow-700 to-yellow-400 text-white font-bold text-base border-none cursor-pointer hover:-translate-y-0.5 transition-transform"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.05em" }}>
                     SEND MESSAGE
                   </button>
@@ -133,15 +133,15 @@ export default function Contact() {
               <p className="text-xs font-bold tracking-widest uppercase text-[#9a8a64] dark:text-slate-500 mb-4">Follow Us</p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://www.facebook.com/GTOPortalPhilippines" target="_blank" rel="noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl text-[#6b5d3f] dark:text-slate-300 text-sm hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-all no-underline">
+                  className="flex items-center gap-2 px-4 py-2.5 bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl text-[#6b5d3f] dark:text-slate-300 text-sm hover:border-yellow-500 hover:text-yellow-600 dark:hover:text-yellow-400 transition-all no-underline">
                   Facebook
                 </a>
                 <a href="#"
-                  className="flex items-center gap-2 px-4 py-2.5 bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl text-[#6b5d3f] dark:text-slate-300 text-sm hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-all no-underline">
+                  className="flex items-center gap-2 px-4 py-2.5 bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl text-[#6b5d3f] dark:text-slate-300 text-sm hover:border-yellow-500 hover:text-yellow-600 dark:hover:text-yellow-400 transition-all no-underline">
                   Instagram
                 </a>
                 <a href="#"
-                  className="flex items-center gap-2 px-4 py-2.5 bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl text-[#6b5d3f] dark:text-slate-300 text-sm hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-all no-underline">
+                  className="flex items-center gap-2 px-4 py-2.5 bg-[#faf6ea] dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl text-[#6b5d3f] dark:text-slate-300 text-sm hover:border-yellow-500 hover:text-yellow-600 dark:hover:text-yellow-400 transition-all no-underline">
                   YouTube
                 </a>
               </div>

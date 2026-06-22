@@ -13,7 +13,7 @@ const navLinks = [
   { label: "About Us", path: "/about" },
 ];
 
-const brands = ["AEROPAK", "AUTOGREEN", "BLAUPUNKT", "LUBRIGOLD", "MICHIBA", "ORELUBE", "SAFEWAY", "SILOCK", "WHIZ"];
+const brands = ["ENI LUBRICANTS", "AEROPAK", "BLAUPUNKT", "SAFEWAY TIRES", "VEENTO TIRES", "AUTOGREEN TIRES", "ST POWER BATTERY", "LUBRIGOLD", "WHIZ"];
 
 export default function Navbar() {
   const navigate = useNavigate();
