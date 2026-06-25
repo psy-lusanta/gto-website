@@ -26,7 +26,6 @@ const socials = [
   { label: "Facebook",  href: "https://www.facebook.com/GTOPortalPhilippines", icon: FaFacebookF,  color: "hover:bg-blue-600 hover:border-blue-600" },
   { label: "Instagram", href: "#",                                              icon: FaInstagram, color: "hover:bg-pink-600 hover:border-pink-600" },
   { label: "YouTube",   href: "#",                                              icon: FaYoutube,   color: "hover:bg-red-600 hover:border-red-600" },
-  { label: "Twitter",   href: "#",                                              icon: FaTwitter,   color: "hover:bg-sky-500 hover:border-sky-500" },
 ];
 
 export default function Footer() {

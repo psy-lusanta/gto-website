@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: #08070a; color: #f0ece8; }
+body { font-family: 'Manrope', sans-serif; background: #08070a; color: #f0ece8; }
 a { text-decoration: none; }
 
 /* ── Mobile base ── */

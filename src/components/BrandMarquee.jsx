@@ -20,11 +20,9 @@ const brandLogos = [
   { name: "WHIZ", img: whiz },
 ];
 
-const marqueeLogos = [...brandLogos, ...brandLogos];
-
 export default function BrandsMarquee() {
   return (
-    <section id="brands" className="py-20 sm:py-28 bg-[#fdfbf3] dark:bg-[#08070a] overflow-hidden transition-colors duration-300">
+    <section id="brands" className="py-20 sm:py-28 bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="text-center mb-12 reveal">
@@ -44,50 +42,23 @@ export default function BrandsMarquee() {
             We proudly distribute internationally recognized automotive and motorcycle brands across the Philippines.
           </p>
         </div>
-      </div>
 
-      {/* Row 1 — scrolls left */}
-      <div className="relative w-full mb-5">
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none hidden dark:block"
-          style={{ background: "linear-gradient(to right, #08070a, transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none hidden dark:block"
-          style={{ background: "linear-gradient(to left, #08070a, transparent)" }} />
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none block dark:hidden"
-          style={{ background: "linear-gradient(to right, #fdfbf3, transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none block dark:hidden"
-          style={{ background: "linear-gradient(to left, #fdfbf3, transparent)" }} />
-
-        <div className="flex w-max" style={{ animation: "marqueeLeft 28s linear infinite" }}>
-          {marqueeLogos.map((b, i) => (
-            <div key={`row1-${i}`}
-              className="flex items-center justify-center mx-4 sm:mx-6 shrink-0 bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-12 py-5 sm:py-8 hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:bg-yellow-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none">
-              {/* ── LOGO SIZE: change h-10 (mobile) and sm:h-16 (desktop) ── */}
-              <img src={b.img} alt={b.name} className="h-10 sm:h-16 w-auto object-contain" />
+        {/* Static Brand Grid - Responsive */}
+        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 px-4">
+          {brandLogos.map((brand, index) => (
+            <div 
+              key={index}
+              className="flex items-center justify-center bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-10 py-6 sm:py-8 hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:bg-yellow-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none group"
+            >
+              <img 
+                src={brand.img} 
+                alt={brand.name} 
+                className="h-12 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Row 2 — scrolls right */}
-      <div className="relative w-full">
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none hidden dark:block"
-          style={{ background: "linear-gradient(to right, #08070a, transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none hidden dark:block"
-          style={{ background: "linear-gradient(to left, #08070a, transparent)" }} />
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none block dark:hidden"
-          style={{ background: "linear-gradient(to right, #fdfbf3, transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none block dark:hidden"
-          style={{ background: "linear-gradient(to left, #fdfbf3, transparent)" }} />
-
-        <div className="flex w-max" style={{ animation: "marqueeRight 32s linear infinite" }}>
-          {[...marqueeLogos].reverse().map((b, i) => (
-            <div key={`row2-${i}`}
-              className="flex items-center justify-center mx-4 sm:mx-6 shrink-0 bg-white dark:bg-white/[.04] border border-[#e8dfc8] dark:border-white/10 rounded-2xl px-8 sm:px-12 py-5 sm:py-8 hover:border-yellow-500/60 dark:hover:border-yellow-600/40 hover:bg-yellow-50 dark:hover:bg-white/[.07] transition-all duration-300 shadow-sm dark:shadow-none">
-              {/* ── LOGO SIZE: change h-10 (mobile) and sm:h-16 (desktop) ── */}
-              <img src={b.img} alt={b.name} className="h-10 sm:h-16 w-auto object-contain" />
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
