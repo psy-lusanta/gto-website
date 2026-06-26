@@ -5,7 +5,7 @@ export default function CareersPage() {
   useReveal();
 
   return (
-    <div className="pt-20">
+    <div>
       <Careers />
     </div>
   );

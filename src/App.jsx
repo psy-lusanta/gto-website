@@ -8,7 +8,6 @@ import ShopPage    from "./pages/ShopPage";
 import NewsPage    from "./pages/NewsPage";
 import ContactPage from "./pages/ContactPage";
 import CareersPage from "./pages/CareersPage";
-import AboutPage   from "./pages/AboutPage";
 import ProductPage from "./components/ProductPage";
 import BlogPage    from "./components/BlogPage";
 import PolicyPage  from "./components/PolicyPage";
@@ -31,7 +30,6 @@ export default function App() {
           <Route path="/news"                 element={<NewsPage />} />
           <Route path="/contact"              element={<ContactPage />} />
           <Route path="/careers"              element={<CareersPage />} />
-          <Route path="/about"                element={<AboutPage />} />
           <Route path="/product/:id"          element={<ProductPage />} />
           <Route path="/blog/:id/:slug"       element={<BlogPage />} />
           <Route path="/:slug"                element={<PolicyPage />} />

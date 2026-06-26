@@ -5,7 +5,7 @@ export default function AboutPage() {
   useReveal();
 
   return (
-    <div className="pt-20">
+    <div>
       <About />
     </div>
   );

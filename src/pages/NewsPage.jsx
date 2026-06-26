@@ -5,7 +5,7 @@ export default function NewsPage() {
   useReveal();
 
   return (
-    <div className="pt-20">
+    <div>
       <News />
     </div>
   );

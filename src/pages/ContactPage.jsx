@@ -5,7 +5,7 @@ export default function ContactPage() {
   useReveal();
 
   return (
-    <div className="pt-20">
+    <div>
       <Contact />
     </div>
   );

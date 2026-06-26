@@ -11,14 +11,70 @@ const ITEMS_PER_PAGE = 12;
 
 const slides = [
   {
-    src: "/Products/AEROPAK/AEROPAK COVER.jpeg",
+    src: "/Banner/aeropak.jpg",
     title: "Premium Automotive Products",
     subtitle: "Trusted brands, delivered nationwide.",
     cta: "Shop Now",
     ctaBrand: null,
   },
   {
-    src: "/images/shop/banner-3.jpg",
+    src: "/Banner/autogreen.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/blaupunkt.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/eni oil.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/gto.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/lubrigold.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/lubrigold.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/st power.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/veento.jpg",
+    title: "ENI Lubricants",
+    subtitle: "World-class engine oils for motorcycles and cars.",
+    cta: "View ENI",
+    ctaBrand: "ENI LUBRICANTS",
+  },
+  {
+    src: "/Banner/whiz.jpg",
     title: "ENI Lubricants",
     subtitle: "World-class engine oils for motorcycles and cars.",
     cta: "View ENI",
@@ -27,7 +83,7 @@ const slides = [
 ];
 
 function ShopBanner({ onBrandFilter }) {
-  const [current,   setCurrent]   = useState(0);
+  const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
   const autoRef = useRef(null);
 
@@ -78,9 +134,7 @@ function ShopBanner({ onBrandFilter }) {
               e.target.parentElement.style.background = "linear-gradient(135deg, #1a1208, #2d1f0a)";
             }}
           />
-
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </div>
       ))}
 
@@ -102,11 +156,10 @@ function ShopBanner({ onBrandFilter }) {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`rounded-full transition-all duration-300 border-none cursor-pointer ${
-              i === current
+            className={`rounded-full transition-all duration-300 border-none cursor-pointer ${i === current
                 ? "w-6 sm:w-8 h-2 bg-[#cea14e]"
                 : "w-2 h-2 bg-white/40 hover:bg-white/70"
-            }`}
+              }`}
           />
         ))}
       </div>
@@ -125,12 +178,12 @@ export default function Shop() {
   const [searchParams] = useSearchParams();
   const brandFromUrl = searchParams.get("brand");
 
-  const [activeBrand,    setActiveBrand]    = useState(brandFromUrl || "All");
+  const [activeBrand, setActiveBrand] = useState(brandFromUrl || "All");
   const [activeCategory, setActiveCategory] = useState("All");
-  const [search,         setSearch]         = useState("");
-  const [sortBy,         setSortBy]         = useState("default");
-  const [page,           setPage]           = useState(1);
-  const [filterOpen,     setFilterOpen]     = useState(false);
+  const [search, setSearch] = useState("");
+  const [sortBy, setSortBy] = useState("default");
+  const [page, setPage] = useState(1);
+  const [filterOpen, setFilterOpen] = useState(false);
 
   useEffect(() => {
     setActiveBrand(brandFromUrl || "All");
@@ -145,20 +198,20 @@ export default function Shop() {
 
   const filtered = useMemo(() => {
     let list = [...products];
-    if (activeBrand    !== "All") list = list.filter(p => p.brand    === activeBrand);
+    if (activeBrand !== "All") list = list.filter(p => p.brand === activeBrand);
     if (activeCategory !== "All") list = list.filter(p => p.category === activeCategory);
     if (search) list = list.filter(p =>
       p.name.toLowerCase().includes(search.toLowerCase()) ||
       p.brand.toLowerCase().includes(search.toLowerCase())
     );
-    if (sortBy === "price-asc")  list.sort((a, b) => a.price - b.price);
+    if (sortBy === "price-asc") list.sort((a, b) => a.price - b.price);
     if (sortBy === "price-desc") list.sort((a, b) => b.price - a.price);
-    if (sortBy === "name")       list.sort((a, b) => a.name.localeCompare(b.name));
+    if (sortBy === "name") list.sort((a, b) => a.name.localeCompare(b.name));
     return list;
   }, [activeBrand, activeCategory, search, sortBy]);
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-  const paginated  = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+  const paginated = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
 
   const resetFilters = () => {
     setActiveBrand("All");
@@ -169,7 +222,7 @@ export default function Shop() {
   };
 
   const handleBrand = (b) => { setActiveBrand(b); setPage(1); };
-  const handleCat   = (c) => { setActiveCategory(c); setPage(1); };
+  const handleCat = (c) => { setActiveCategory(c); setPage(1); };
 
   return (
     <section id="shop" className="bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
@@ -236,7 +289,7 @@ export default function Shop() {
                 <select value={sortBy} onChange={e => setSortBy(e.target.value)}
                   className="w-full bg-black/5 dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-xl px-3 py-2.5 text-[#3f3522] dark:text-slate-300 text-sm outline-none focus:border-yellow-500 transition-colors">
                   <option value="default" className="bg-white dark:bg-[#0d0b0f]">Default</option>
-                  <option value="name"    className="bg-white dark:bg-[#0d0b0f]">Name A–Z</option>
+                  <option value="name" className="bg-white dark:bg-[#0d0b0f]">Name A–Z</option>
                 </select>
               </div>
 
@@ -246,11 +299,10 @@ export default function Shop() {
                 <div className="flex flex-col gap-1">
                   {brands.map(b => (
                     <button key={b} onClick={() => handleBrand(b)}
-                      className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${
-                        activeBrand === b
+                      className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${activeBrand === b
                           ? "bg-yellow-600 text-white font-semibold"
                           : "text-[#6b5d3f] dark:text-slate-400 hover:text-[#1c1505] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
-                      }`}>
+                        }`}>
                       {b}
                     </button>
                   ))}
@@ -263,11 +315,10 @@ export default function Shop() {
                 <div className="flex flex-col gap-1">
                   {categories.map(c => (
                     <button key={c} onClick={() => handleCat(c)}
-                      className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${
-                        activeCategory === c
+                      className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${activeCategory === c
                           ? "bg-yellow-600 text-white font-semibold"
                           : "text-[#6b5d3f] dark:text-slate-400 hover:text-[#1c1505] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
-                      }`}>
+                        }`}>
                       {c}
                     </button>
                   ))}
@@ -307,11 +358,10 @@ export default function Shop() {
                     </div>
 
                     <div className="p-3 text-center">
-                      <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full border mb-2 ${
-                        theme === "dark"
+                      <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full border mb-2 ${theme === "dark"
                           ? brandColors[p.brand] || "bg-yellow-500/20 text-yellow-300 border-yellow-500/30"
                           : "bg-yellow-500/20 text-yellow-700 border-yellow-500/30"
-                      }`}>
+                        }`}>
                         {p.brand}
                       </span>
                       <p className="text-[#1c1505] dark:text-white text-sm font-medium leading-snug line-clamp-2">{p.name}</p>
@@ -330,11 +380,10 @@ export default function Shop() {
                 </button>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
                   <button key={n} onClick={() => setPage(n)}
-                    className={`w-9 h-9 rounded-lg text-sm font-medium transition-all ${
-                      page === n
+                    className={`w-9 h-9 rounded-lg text-sm font-medium transition-all ${page === n
                         ? "bg-yellow-600 text-white"
                         : "bg-black/5 dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500 hover:text-yellow-600 dark:hover:text-yellow-400"
-                    }`}>
+                      }`}>
                     {n}
                   </button>
                 ))}

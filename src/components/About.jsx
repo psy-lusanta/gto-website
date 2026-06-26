@@ -67,8 +67,6 @@ const historyImages = [
   {
     src: "/Old Pictures/pic19.jpg",
   },
-
-
 ];
 
 const values = [

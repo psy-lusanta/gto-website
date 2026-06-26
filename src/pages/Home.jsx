@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Hero     from "../components/Hero";
-import BrandsMarquee from "../components/BrandMarquee";
+// import BrandsMarquee from "../components/BrandMarquee";
 // import Brands   from "../components/Brands";
 import News     from "../components/News";
 import Careers  from "../components/Careers";
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <BrandsMarquee />
+      <About />
       {/* <Brands /> */}
     </>
   );
