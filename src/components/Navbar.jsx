@@ -45,7 +45,13 @@ export default function Navbar() {
   const closeDd = () => { ddTimeout.current = setTimeout(() => setDdOpen(false), 220); };
 
   const handleNavClick = (link) => {
-    if (link.scrollTo) {
+    if (link.label === "Home") {
+      if (location.pathname === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/");
+      }
+    } else if (link.scrollTo) {
       if (location.pathname !== "/") {
         navigate("/");
         setTimeout(() => {
@@ -55,7 +61,7 @@ export default function Navbar() {
             const offset = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
             window.scrollTo({ top: offset, behavior: "smooth" });
           }
-        }, 200); 
+        }, 200);
       } else {
         const element = document.getElementById("about-us");
         if (element) {
@@ -74,7 +80,7 @@ export default function Navbar() {
   return (
     <>
       <header id="site-header"
-        className={`sticky top-0 left-0 right-0 z-50 backdrop-blur-xl transition-all duration-300 ${scrolled
+        className={`sticky top-0 left-0 right-0 z-[100] backdrop-blur-xl transition-all duration-300 ${scrolled
           ? "bg-white/80 backdrop-blur-2xl dark:bg-[#08070a]/75 border-[#e8dfc8] dark:border-white/10 shadow-sm dark:shadow-none"
           : "bg-[#fdfbf3]/75 dark:bg-[#08070a]/65 border-[#e8dfc8]/50 dark:border-white/8"
           }`}>
@@ -82,7 +88,10 @@ export default function Navbar() {
         <div className="w-full flex px-8 xl:px-12 py-4">
 
           {/* Logo */}
-          <button onClick={() => navigate("/")} className="flex items-center shrink-0">
+          <button onClick={() => {
+            if (location.pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
+            else navigate("/");
+          }} className="flex items-center shrink-0">
             <img
               src={theme === "dark" ? GTOLogoWhite : GTOLogoDark}
               alt="GTO Trading"
@@ -93,8 +102,10 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {/* Home */}
-            <button onClick={() => navigate("/")}
-              className={`text-[20px] font-extrabold px-4 py-2.5 transition-all ${location.pathname === "/" ? "text-[#cea14e]" : "text-[#3f3522] dark:text-slate-300 hover:text-[#cea14e]"}`}>
+            <button onClick={() => {
+              if (location.pathname === "/") window.scrollTo({ top: 0, behavior: "smooth" });
+              else navigate("/");
+            }} className={`text-[20px] font-extrabold px-4 py-2.5 transition-all ${location.pathname === "/" ? "text-[#cea14e]" : "text-[#3f3522] dark:text-slate-300 hover:text-[#cea14e]"}`}>
               Home
             </button>
 
@@ -119,6 +130,7 @@ export default function Navbar() {
               </div>
             </div>
 
+            {/* Other Links */}
             {navLinks.filter(l => l.label !== "Home").map(l => (
               <button
                 key={l.label}
@@ -136,7 +148,7 @@ export default function Navbar() {
               {theme === "dark" ? <Sun size={17} className="text-yellow-400" /> : <Moon size={17} className="text-[#6b5d3f]" />}
             </button>
 
-            <button onClick={() => navigate("/login")} className="hidden lg:inline-flex items-center gap-2 text-sm font-extrabold px-4 py-2 rounded-xl border border-[#e8dfc8] dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/8 transition-all">
+            <button onClick={() => navigate("/login")} className="hidden lg:inline-flex items-center gap-2 text-black text-sm font-extrabold px-4 py-2 rounded-xl border dark:text-white border-[#e8dfc8] dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/8 transition-all">
               <LogIn size={15} /> Login
             </button>
 

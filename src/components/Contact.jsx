@@ -16,21 +16,21 @@ export default function Contact() {
   const handleSubmit = e => { e.preventDefault(); setSubmitted(true); };
 
   return (
-    <section id="contact" className="py-24 bg-[#fdfbf3] dark:bg-white/[.02] transition-colors duration-300">
+    <section id="contact" className="pb-20 py-10 sm:pb-28 sm:py-10 bg-[#fdfbf3] dark:bg-white/[.02] transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-5">
 
         <div className="text-center mb-16 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-yellow-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
+            <div className="w-8 h-px bg-[#cea14e] " />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-[#cea14e]  dark:text-[#cea14e] "
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Get In Touch
             </span>
-            <div className="w-8 h-px bg-yellow-600" />
+            <div className="w-8 h-px bg-[#cea14e]" />
           </div>
           <h2 className="font-black text-5xl sm:text-6xl lg:text-7xl text-[#1c1505] dark:text-white leading-none mb-4"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-            Contact <em className="text-yellow-600 dark:text-yellow-500 not-italic">GTO Trading</em>
+            Contact <em className="text-[#cea14e]  dark:text-[#cea14e]  not-italic">GTO Trading</em>
           </h2>
           <p className="text-[#6b5d3f] dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
             Have a question about our products, pricing, or becoming a reseller? We'd love to hear from you.

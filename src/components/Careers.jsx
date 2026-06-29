@@ -34,23 +34,23 @@ export default function Careers() {
   };
 
   return (
-    <section id="careers" className="py-24 bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
+    <section id="careers" className="pb-20 py-10 sm:pb-28 sm:py-10 bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-5">
 
         {/* Header */}
         <div className="text-center mb-16 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-yellow-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
+            <div className="w-8 h-px bg-[#cea14e] " />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-[#cea14e]  dark:text-[#cea14e] "
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Join Our Team
             </span>
-            <div className="w-8 h-px bg-yellow-600" />
+            <div className="w-8 h-px bg-[#cea14e] " />
           </div>
           <h2 className="font-black text-5xl sm:text-6xl lg:text-7xl text-[#1c1505] dark:text-white leading-none mb-4"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
             Build Your Career <br />
-            <em className="text-yellow-600 dark:text-yellow-500 not-italic">With GTO</em>
+            <em className="text-[#cea14e]  dark:text-[#cea14e]  not-italic">With GTO</em>
           </h2>
           <p className="text-[#6b5d3f] dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
             We're always looking for passionate, driven individuals to join our growing team.
@@ -64,7 +64,7 @@ export default function Careers() {
           {/* Left — vacancies info */}
           <div className="reveal">
             <div className="flex items-center gap-3 mb-6">
-              <Briefcase size={18} className="text-yellow-600 dark:text-yellow-500" />
+              <Briefcase size={18} className="text-[#cea14e]  dark:text-[#cea14e] " />
               <h3 className="font-black text-3xl text-[#1c1505] dark:text-white"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 Available Positions
@@ -75,7 +75,7 @@ export default function Careers() {
               {positions.map((pos) => (
                 <div key={pos}
                   className="flex items-center gap-3 bg-white dark:bg-white/[.03] border border-[#e8dfc8] dark:border-white/10 rounded-xl px-4 py-3 hover:border-yellow-500/50 dark:hover:border-yellow-600/30 hover:bg-yellow-50/50 dark:hover:bg-white/[.05] transition-all duration-200 group shadow-sm dark:shadow-none">
-                  <div className="w-2 h-2 rounded-full bg-yellow-600 group-hover:scale-125 transition-transform" />
+                  <div className="w-2 h-2 rounded-full bg-[#cea14e] 0 group-hover:scale-125 transition-transform" />
                   <span className="text-[#3f3522] dark:text-slate-300 text-sm group-hover:text-[#1c1505] dark:group-hover:text-white transition-colors">{pos}</span>
                 </div>
               ))}
@@ -83,7 +83,7 @@ export default function Careers() {
 
             {/* Address card */}
             <div className="bg-gradient-to-br from-yellow-100/60 dark:from-yellow-900/20 to-yellow-50/30 dark:to-yellow-800/5 border border-yellow-200 dark:border-yellow-600/20 rounded-2xl p-6">
-              <p className="text-yellow-600 dark:text-yellow-400 font-bold text-sm mb-3 uppercase tracking-widest"
+              <p className="text-yellow-600 dark:text-[#cea14e]  font-bold text-sm mb-3 uppercase tracking-widest"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                 Our Office
               </p>

@@ -50,9 +50,6 @@ const historyImages = [
     src: "/Old Pictures/pic13.jpg",
   },
   {
-    src: "/Old Pictures/pic14.jpg",
-  },
-  {
     src: "/Old Pictures/pic15.jpg",
   },
   {
@@ -144,13 +141,13 @@ export default function About() {
       {/* Purpose */}
       <div className="pt-16 sm:pt-24 max-w-3xl mx-auto px-4 text-center reveal">
         <div className="flex items-center justify-center gap-3 mb-5">
-          <div className="w-8 sm:w-12 h-px bg-yellow-600" />
-          <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
+          <div className="w-8 sm:w-12 h-px bg-[#cea14e]" />
+          <span className="text-xs font-bold tracking-[.2em] uppercase text-[#cea14e] dark:text-[#cea14e]"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Purpose</span>
-          <div className="w-8 sm:w-12 h-px bg-yellow-600" />
+          <div className="w-8 sm:w-12 h-px bg-[#cea14e]" />
         </div>
-        <div className="w-12 h-12 rounded-2xl bg-yellow-100 dark:bg-yellow-600/15 border border-yellow-300 dark:border-yellow-600/25 flex items-center justify-center mx-auto mb-5">
-          <Compass size={22} className="text-yellow-600 dark:text-yellow-500" />
+        <div className="w-12 h-12 rounded-2xl bg-yellow-100 dark:bg-[#cea14e]/15 border border-[#cea14e] dark:border-yellow-600/25 flex items-center justify-center mx-auto mb-5">
+          <Compass size={22} className="text-[#cea14e] dark:text-[#cea14e]" />
         </div>
         <p className="text-[#3f3522] dark:text-slate-300 leading-relaxed text-sm sm:text-base">
           To empower businesses by providing reliable product solutions, consistent supply, and strong brand support, enabling our partners to grow with confidence in a competitive market.
@@ -166,11 +163,11 @@ export default function About() {
             <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-yellow-600/10 blur-3xl pointer-events-none" />
             <div className="relative">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-yellow-100 dark:bg-yellow-600/20 border border-yellow-300 dark:border-yellow-600/30 flex items-center justify-center mb-5">
-                <BowArrow size={20} className="text-yellow-600 dark:text-yellow-500" />
+                <BowArrow size={20} className="text-[#cea14e] dark:text-[#cea14e]" />
               </div>
               <h3 className="font-black text-2xl sm:text-3xl text-[#1c1505] dark:text-white mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Vision</h3>
               <p className="text-[#3f3522] dark:text-slate-400 leading-relaxed text-sm sm:text-base">
-                To be the most <span className="text-yellow-600 dark:text-yellow-400 font-semibold">trusted partner</span> in delivering quality products across the automotive, industrial, commercial, and motorcycle industries.
+                To be the most <span className="text-[#cea14e] dark:text-[#cea14e] font-semibold">trusted partner</span> in delivering quality products across the automotive, industrial, commercial, and motorcycle industries.
               </p>
             </div>
           </div>
@@ -184,12 +181,12 @@ export default function About() {
               </div>
               <h3 className="font-black text-2xl sm:text-3xl text-[#1c1505] dark:text-white mb-3" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Mission</h3>
               <p className="text-[#3f3522] dark:text-slate-400 leading-relaxed mb-3 text-sm sm:text-base">
-                <span className="text-yellow-600 dark:text-yellow-400 font-bold">Gearing Towards Outcomes</span>
+                <span className="text-[#cea14e] dark:text-[#cea14e] font-bold">Gearing Towards Outcomes</span>
               </p>
               <ul className="space-y-2">
                 {["Deliver solutions and quality products that help partners stay competitive", "Bridge globally trusted brands into the Philippine market.", "Build long-term relationships that go beyond expectations"].map((m, i) => (
                   <li key={i} className="flex items-start gap-3 text-[#3f3522] dark:text-slate-400 text-sm">
-                    <span className="text-yellow-600 dark:text-yellow-500 mt-0.5 shrink-0 font-bold">→</span>{m}
+                    <span className="text-[#cea14e] dark:text-[#cea14e] mt-0.5 shrink-0 font-bold">→</span>{m}
                   </li>
                 ))}
               </ul>
@@ -203,9 +200,9 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10 reveal">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-yellow-600" />
-              <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our History</span>
-              <div className="w-8 h-px bg-yellow-600" />
+              <div className="w-8 h-px bg-[#cea14e]" />
+              <span className="text-xs font-bold tracking-[.2em] uppercase text-[#cea14e] dark:text-[#cea14e]" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our History</span>
+              <div className="w-8 h-px bg-[#cea14e]" />
             </div>
             <h2 className="font-black text-[#1c1505] dark:text-white leading-none" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3rem)" }}>
               Over 50 Years of Growth
@@ -213,46 +210,53 @@ export default function About() {
           </div>
 
           {/* === IMAGE CAROUSEL === */}
-          <div className="mb-12 reveal">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[16/9] md:aspect-[21/9] bg-black">
-              {historyImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-700 ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-                >
-                  <img
-                    src={image.src}
-                    className="w-full h-full object-contain"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                </div>
-              ))}
-
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all backdrop-blur-sm z-20"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all backdrop-blur-sm z-20"
-              >
-                <ChevronRight size={24} />
-              </button>
-
-              {/* Dots Indicator */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-                {historyImages.map((_, index) => (
-                  <button
+          <div className="mb-12 reveal px-4">
+            <div className="relative w-full max-w-[1920px] mx-auto">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-3xl shadow-2xl bg-black">
+                {historyImages.map((image, index) => (
+                  <div
                     key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${index === currentSlide
-                      ? 'bg-yellow-500 scale-125'
-                      : 'bg-white/60 hover:bg-white/90'}`}
-                  />
+                    className={`absolute inset-0 transition-opacity duration-700 ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={`History ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: "center" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  </div>
                 ))}
+
+                {/* Arrows - Smaller on mobile */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/80 text-white p-2.5 sm:p-4 rounded-full transition-all backdrop-blur-md z-20 active:scale-95"
+                >
+                  <ChevronLeft size={22} className="sm:w-7 sm:h-7 text-[#cea14e]" />
+                </button>
+
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/80 text-white p-2.5 sm:p-4 rounded-full transition-all backdrop-blur-md z-20 active:scale-95"
+                >
+                  <ChevronRight size={22} className="sm:w-7 sm:h-7 text-[#cea14e]" />
+                </button>
+
+                {/* Dots - Smaller & cleaner on mobile */}
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                  {historyImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                          ? 'bg-[#cea14e] scale-120'
+                          : 'bg-white/60 hover:bg-white/80'
+                        }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -264,8 +268,8 @@ export default function About() {
                 key={t.decade}
                 onClick={() => setActiveDecade(i)}
                 className={`px-5 py-2 rounded-full text-sm font-bold border transition-all duration-300 whitespace-nowrap shrink-0 ${activeDecade === i
-                  ? "bg-yellow-600 border-yellow-600 text-white"
-                  : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500/60 dark:hover:border-yellow-600/50 hover:text-yellow-600 dark:hover:text-yellow-400"
+                  ? "bg-[#cea14e] border-[#cea14e] text-white"
+                  : "bg-transparent border-[#e8dfc8] dark:border-white/15 text-[#6b5d3f] dark:text-slate-400 hover:border-yellow-500/60 dark:hover:border-yellow-600/50 hover:text-[#cea14e] dark:hover:text-[#cea14e]"
                   }`}
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
@@ -300,9 +304,9 @@ export default function About() {
       <div className="py-16 sm:py-24 max-w-6xl mx-auto px-4">
         <div className="text-center mb-10 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-yellow-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Values</span>
-            <div className="w-8 h-px bg-yellow-600" />
+            <div className="w-8 h-px bg-[#cea14e]" />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-[#cea14e] dark:text-[#cea14e]" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>Our Values</span>
+            <div className="w-8 h-px bg-[#cea14e]" />
           </div>
           <h2 className="font-black text-[#1c1505] dark:text-white leading-none" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3rem)" }}>
             What We Stand For
@@ -316,32 +320,15 @@ export default function About() {
                 className="reveal group bg-white dark:bg-white/5 border border-[#e8dfc8] dark:border-white/10 rounded-2xl p-5 sm:p-6 hover:border-yellow-500/50 dark:hover:border-yellow-600/40 hover:-translate-y-1 transition-all duration-300 shadow-sm dark:shadow-none"
                 style={{ transitionDelay: `${i * 0.08}s` }}>
                 <div className="mb-4">
-                  <Icon size={32} className="text-yellow-600 dark:text-yellow-500 group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition-colors" />
+                  <Icon size={32} className="text-[#cea14e] dark:text-[#cea14e] group-hover:text-[#cea14e] dark:group-hover:text-[#b48834] transition-colors" />
                 </div>
-                <h4 className="font-black text-base sm:text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                <h4 className="font-black text-base sm:text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-[#cea14e] dark:group-hover:text-[#b48834] transition-colors" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   {v.title}
                 </h4>
                 <p className="text-[#6b5d3f] dark:text-slate-500 text-xs sm:text-sm leading-relaxed">{v.desc}</p>
               </div>
             );
           })}
-        </div>
-      </div>
-
-      <div className="border-b border-[#e8dfc8] dark:border-white/10"
-        style={{ background: "linear-gradient(135deg, rgba(194,69,12,.10), rgba(146,64,14,.04))" }}>
-        <div className="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="font-black text-[#1c1505] dark:text-white mb-1"
-              style={{ fontSize: "clamp(1.5rem, 5vw, 1.875rem)", fontFamily: "'Barlow Condensed', sans-serif" }}>
-              Ready to grow your business?
-            </h3>
-            <p className="text-[#6b5d3f] dark:text-slate-400 text-sm">Become a GTO reseller and get access to our full product lineup.</p>
-          </div>
-          <a href="https://gtotrading.com.ph/become-a-seller" target="_blank" rel="noreferrer"
-            className="shrink-0 flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-yellow-700 to-yellow-400 text-white font-bold text-sm hover:-translate-y-0.5 transition-transform no-underline">
-            Become a Reseller <ExternalLink size={14} />
-          </a>
         </div>
       </div>
     </section>

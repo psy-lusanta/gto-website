@@ -6,21 +6,21 @@ export default function News() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section id="news" className="py-20 sm:py-28 bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
+    <section id="news" className="pb-20 py-10 sm:pb-28 sm:py-10 bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="text-center mb-12 reveal">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-yellow-600" />
-            <span className="text-xs font-bold tracking-[.2em] uppercase text-yellow-600 dark:text-yellow-500"
+            <div className="w-8 h-px bg-[#cea14e] " />
+            <span className="text-xs font-bold tracking-[.2em] uppercase text-[#cea14e]  dark:text-[#cea14e] "
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               Stay Updated
             </span>
-            <div className="w-8 h-px bg-yellow-600" />
+            <div className="w-8 h-px bg-[#cea14e] " />
           </div>
           <h2 className="font-black text-[#1c1505] dark:text-white leading-none mb-3"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(2rem, 6vw, 3.5rem)" }}>
-            <em className="text-yellow-600 dark:text-yellow-500 not-italic">News</em> and <em className="text-yellow-600 dark:text-yellow-500 not-italic">Events</em>
+            <em className="text-[#cea14e]  dark:[#cea14e]  not-italic">News</em> and <em className="text-[#cea14e] dark:text-[#cea14e] not-italic">Events</em>
           </h2>
           <p className="text-[#6b5d3f] dark:text-slate-400 max-w-xl mx-auto leading-relaxed text-sm sm:text-base">
             Company announcements, product launches, and updates from GTO Trading.
@@ -44,12 +44,12 @@ export default function News() {
                 <span className="flex items-center gap-1.5 text-[#9a8a64] dark:text-slate-500 text-xs mb-2">
                   <Calendar size={11} /> {n.date}
                 </span>
-                <h3 className="font-black text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors line-clamp-2"
+                <h3 className="font-black text-lg text-[#1c1505] dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-[#cea14e]  transition-colors line-clamp-2"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                   {n.title}
                 </h3>
                 <p className="text-[#6b5d3f] dark:text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">{n.excerpt}</p>
-                <div className="inline-flex items-center gap-1.5 text-yellow-600 dark:text-yellow-400 font-semibold text-sm group-hover:gap-2.5 transition-all">
+                <div className="inline-flex items-center gap-1.5 text-[#cea14e]  dark:text-[#cea14e]  font-semibold text-sm group-hover:gap-2.5 transition-all">
                   Read More <ArrowRight size={14} />
                 </div>
               </div>

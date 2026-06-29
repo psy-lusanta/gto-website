@@ -9,7 +9,6 @@ const quickLinks = [
   { label: "Home",       path: "/" },
   { label: "Shop",       path: "/shop" },
   { label: "News",       path: "/news" },
-  { label: "About Us",   path: "/about" },
   { label: "Careers",    path: "/careers" },
   { label: "Contact Us", path: "/contact" },
 ];
@@ -69,19 +68,19 @@ export default function Footer() {
             <p className="text-xs font-bold tracking-[.2em] uppercase text-[#9a8a64] dark:text-slate-500 mb-4">Contact</p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <MapPin size={14} className="text-yellow-600 dark:text-yellow-500 mt-0.5 shrink-0" />
+                <MapPin size={14} className="text-[#cea14e] mt-0.5 shrink-0" />
                 <span>#12 Kabignayan St., Doña Josefa, Quezon City</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <Phone size={14} className="text-yellow-600 dark:text-yellow-500 shrink-0" />
+                <Phone size={14} className="text-[#cea14e] shrink-0" />
                 <span>(02) 8-7118005 | 09688996697</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <Mail size={14} className="text-yellow-600 dark:text-yellow-500 shrink-0" />
+                <Mail size={14} className="text-[#cea14e] shrink-0" />
                 <span>info@gtotrading.com.ph</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-[#6b5d3f] dark:text-slate-400">
-                <Clock size={14} className="text-yellow-600 dark:text-yellow-500 shrink-0" />
+                <Clock size={14} className="text-[#cea14e] shrink-0" />
                 <span>Mon–Sat, 7:00 AM – 5:00 PM</span>
               </div>
             </div>

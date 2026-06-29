@@ -33,7 +33,7 @@ export default function ProductPage() {
                     {/* Image */}
                     <div className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-3xl flex items-center justify-center p-10 aspect-square">
                         <img src={product.img} alt={product.name}
-                            className="max-h-72 w-full object-contain"
+                            className="max-h-[400px] w-full object-contain"
                             onError={e => { e.target.src = "https://placehold.co/400x400/1a1a1a/666?text=GTO"; }} />
                     </div>
 
@@ -50,6 +50,7 @@ export default function ProductPage() {
 
                         <p className="text-slate-500 text-sm mb-6">{product.category}</p>
 
+                        {/* PRODUCT 8 */}
                         {/* <div className="text-5xl font-black text-yellow-400 mb-8"
                             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                             ₱{product.price.toLocaleString()}
@@ -63,7 +64,7 @@ export default function ProductPage() {
                                         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                                     }, 100);
                                 }}
-                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-yellow-700 to-yellow-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
+                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#f43f2c] to-[#ff6533] text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
                                 <SiShopee /> Shopee
                             </button>
                             <button
@@ -73,7 +74,7 @@ export default function ProductPage() {
                                         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                                     }, 100);
                                 }}
-                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-yellow-700 to-yellow-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
+                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#0f156e] to-[#2832be] text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
                                 <FaTruck /> Lazada
                             </button>
                             <button
@@ -83,7 +84,7 @@ export default function ProductPage() {
                                         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                                     }, 100);
                                 }}
-                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-yellow-700 to-yellow-400 text-white font-semibold text-sm hover:-translate-y-0.5 transition-transform">
+                                className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full dark:bg-white bg-black text-white dark:text-black font-semibold text-sm hover:-translate-y-0.5 transition-transform">
                                 <SiTiktok /> Tiktok
                             </button>
                         </div>
@@ -102,7 +103,7 @@ export default function ProductPage() {
                     <div>
                         <h2 className="font-black text-3xl text-slate-800 dark:text-white mb-6"
                             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                            More from <em className="text-yellow-500 not-italic">{product.brand}</em>
+                            More from <em className="text-[#cea14e] not-italic">{product.brand}</em>
                         </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             {related.map(p => (
@@ -110,11 +111,11 @@ export default function ProductPage() {
                                     className="group dark:bg-white/[.03] bg-black/[.03] border border-black/10 dark:border-white/10 rounded-2xl overflow-hidden hover:border-yellow-600/40 hover:-translate-y-1 transition-all duration-300">
                                     <div className="dark:bg-white/5 bg-black/5 aspect-square flex items-center justify-center p-4">
                                         <img src={p.img} alt={p.name}
-                                            className="max-h-24 object-contain group-hover:scale-105 transition-transform duration-300"
+                                            className="max-h-[150px] object-contain group-hover:scale-105 transition-transform duration-300"
                                             onError={e => { e.target.src = "https://placehold.co/200x200/1a1a1a/666?text=GTO"; }} />
                                     </div>
                                     <div className="p-3">
-                                        <p className="text-yellow-400 font-black text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                                        <p className="text-[#cea14e] font-black text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
                                             {p.name}
                                         </p>
                                     </div>

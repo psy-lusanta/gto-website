@@ -41,69 +41,105 @@ export default function Hero() {
 
         <div className="relative -top-10 max-w-7xl mx-auto px-4 z-10 w-full">
           <div className="max-w-2xl lg:max-w-3xl">
-            <h1 className="font-black text-white leading-none mb-6"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(3rem, 8vw, 5.5rem)" }}>
-              GRAN TORO ORO<br />
-              <span className="text-[#cea14e]">TRADING</span>
-            </h1>
 
-            <p className="text-xl sm:text-2xl text-white/90 mb-10 leading-tight">
-              Premium automotive and motorcycle parts distributor since 1972
-            </p>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+                }
+              }}
+            >
+              {/* Title - Pop up with bounce */}
+              <motion.h1
+                variants={{
+                  hidden: { opacity: 0, y: 60, scale: 0.9 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: { type: "spring", stiffness: 80, damping: 12 }
+                  }
+                }}
+                className="font-black text-white leading-none mb-6"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(3rem, 8vw, 5.5rem)" }}
+              >
+                <em className="text-[#cea14e] not-italic">G</em>EARING <br />
+                <em className="text-[#cea14e] not-italic">T</em>OWARDS <br />
+                <em className="text-[#cea14e] not-italic">O</em>UTCOME <br />
+              </motion.h1>
 
-            {/* Button */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-start">
-              <a href="#brands" className="w-full sm:w-auto">
-                <button
-                  className="group relative w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 
-                 rounded-2xl bg-gradient-to-br from-[#cea14e] via-amber-500 to-yellow-600 
-                 text-black font-bold tracking-wider uppercase text-base sm:text-sm
-                 hover:from-[#cea14e] hover:via-amber-600 hover:to-yellow-700 
-                 transform hover:-rotate-1 active:scale-95 
-                 transition-all duration-300 ease-out shadow-lg shadow-yellow-500/40 
-                 hover:shadow-xl hover:shadow-yellow-500/50 overflow-hidden"
-                >
-                  <span className="flex items-center justify-center gap-3 relative z-10">
-                    {/* Sun Icon */}
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
-                      />
-                    </svg>
+              {/* Subtitle - Fade in from below */}
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+                }}
+                className="text-xl sm:text-2xl text-white/90 mb-10 leading-tight"
+              >
+                Premium automotive and motorcycle parts distributor since 1972
+              </motion.p>
 
-                    <span>Our Brands</span>
+              {/* Button - Scale + pop effect */}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 30, scale: 0.85 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: { type: "spring", stiffness: 100, damping: 14 }
+                  }
+                }}
+                className="flex flex-col sm:flex-row gap-4 justify-start"
+              >
+                <a href="#brands" className="w-full sm:w-auto">
+                  <button className="group relative w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 rounded-2xl bg-gradient-to-br from-[#cea14e] via-amber-500 to-yellow-600 text-black font-bold tracking-wider uppercase text-base sm:text-sm hover:from-[#cea14e] hover:via-amber-600 hover:to-yellow-700 transform hover:-rotate-1 active:scale-95 transition-all duration-300 ease-out shadow-lg shadow-yellow-500/40 hover:shadow-xl hover:shadow-yellow-500/50 overflow-hidden">
+                    <span className="flex items-center justify-center gap-3 relative z-10">
+                      {/* Sun Icon */}
+                      <svg
+                        stroke="currentColor"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+                        />
+                      </svg>
 
-                    {/* Arrow Icon */}
-                    <svg
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      fill="none"
-                      className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <path
-                        d="M5 12h14m-7-7l7 7-7 7"
-                        strokeWidth="2.5"
-                        strokeLinejoin="round"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
+                      <span>Our Brands</span>
 
-                  {/* Shine / Highlight Effects */}
-                  <div className="absolute inset-0 rounded-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-300 bg-gradient-to-tl from-amber-200/40 via-transparent to-transparent" />
+                      {/* Arrow Icon */}
+                      <svg
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        fill="none"
+                        className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <path
+                          d="M5 12h14m-7-7l7 7-7 7"
+                          strokeWidth="2.5"
+                          strokeLinejoin="round"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </span>
 
-                  <div className="absolute -left-full top-0 h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[200%] transition-transform duration-700 ease-out" />
-                </button>
-              </a>
-            </div>
+                    {/* Shine / Highlight Effects */}
+                    <div className="absolute inset-0 rounded-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-300 bg-gradient-to-tl from-amber-200/40 via-transparent to-transparent" />
+
+                    <div className="absolute -left-full top-0 h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-[200%] transition-transform duration-700 ease-out" />
+                  </button>
+                </a>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
 
