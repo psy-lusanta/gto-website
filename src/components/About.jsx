@@ -56,9 +56,6 @@ const historyImages = [
     src: "/Old Pictures/pic16.jpg",
   },
   {
-    src: "/Old Pictures/pic17.jpg",
-  },
-  {
     src: "/Old Pictures/pic18.jpg",
   },
   {
