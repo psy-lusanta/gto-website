@@ -39,14 +39,14 @@ export const products = [
   { id: 24, brand: "AEROPAK", name: "APK-8665 Penetrating & MultiLube", category: "", img: "/Products/AEROPAK/APK-8665 Penetrating & MultiLube.png" },
 
   //-----------------------------------------------------AUTOGREEN-----------------------------------------------------//
-  { id: 25, brand: "AUTOGREEN TIRES", name: "Autogreen", category: "Automotive", img: "/Products/AUTOGREEN/GRAND TOUR AT2/Autogreen.jpg" },
-  { id: 26, brand: "AUTOGREEN TIRES", name: "Autogreen", category: "Automotive", img: "/Products/AUTOGREEN/ROADTRACKER SC1/ROADTRACKER RT1.jpg" },
-  { id: 27, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CHASER SC1/4242dd1a6fd1fc040041e2cab0ff3748.jpg" },
+  { id: 25, brand: "AUTOGREEN TIRES", name: "Autogreen", category: "Automotive", img: "/Products/AUTOGREEN/GRAND TOUR AT2/Autogreen.png" },
+  { id: 26, brand: "AUTOGREEN TIRES", name: "Autogreen", category: "Automotive", img: "/Products/AUTOGREEN/ROADTRACKER SC1/ROADTRACKER RT1.png" },
+  { id: 27, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CHASER SC1/4242dd1a6fd1fc040041e2cab0ff3748.png" },
   { id: 28, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7/7eaa642ed0e3efdddebdeb58cb52c13b.png" },
   { id: 29, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7/a89cdb3eca543f7c61ecad1403160a04.png" },
   { id: 30, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7/bd105bfe924eb3d490260c75e6bddc28.png" },
-  { id: 31, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7+/2d5370427363cf925f6e2b5a1f2656c9.jpg" },
-  { id: 32, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7+/41870d37c960ea62d4da879091bbceee.jpg" },
+  { id: 31, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7+/2d5370427363cf925f6e2b5a1f2656c9.png" },
+  { id: 32, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SMART CRUISER SC7+/41870d37c960ea62d4da879091bbceee.png" },
   { id: 33, brand: "AUTOGREEN TIRES", name: "TIRES", category: "Automotive", img: "/Products/AUTOGREEN/SPORT CHASER SC2/4970b0acf0c4bf88fc5ad6ee9f79b552.png" },
   { id: 34, brand: "AUTOGREEN TIRES", name: "SPORT CHASER SC2", category: "Automotive", img: "/Products/AUTOGREEN/SPORT CHASER SC2/SPORT CHASER SC2.jpg" },
   { id: 35, brand: "AUTOGREEN TIRES", name: "SPORT CHASER SC2", category: "Automotive", img: "/Products/AUTOGREEN/SPORT CRUISER SC6/0aacc9994089e1f33191da420ec2a65b.png" },
@@ -65,18 +65,18 @@ export const products = [
 
   //-----------------------------------------------------BLAUPUNKT-----------------------------------------------------//
   { id: 48, brand: "BLAUPUNKT", name: "12V S79 BR", category: "Automotive", img: "/Products/BLAUPUNKT/12V-S79-BR-1024x1024.png" },
-  { id: 49, brand: "BLAUPUNKT", name: "12V S92 BK Front Back", category: "Automotive", img: "/Products/BLAUPUNKT/12V-S92-BK-Front-Back-2-1024x1024.jpg" },
-  { id: 51, brand: "BLAUPUNKT", name: "24VVP 2136 SKB 3", category: "Automotive", img: "/Products/BLAUPUNKT/24V-VP-2136-SKB-3.jpg" },
+  { id: 49, brand: "BLAUPUNKT", name: "12V S92 BK Front Back", category: "Automotive", img: "/Products/BLAUPUNKT/12V-S92-BK-Front-Back-2-1024x1024.png" },
+  { id: 51, brand: "BLAUPUNKT", name: "24VVP 2136 SKB 3", category: "Automotive", img: "/Products/BLAUPUNKT/24V-VP-2136-SKB-3.png" },
   { id: 52, brand: "BLAUPUNKT", name: "D72BK", category: "Automotive", img: "/Products/BLAUPUNKT/D72BK-1024x1024.png" },
   { id: 53, brand: "BLAUPUNKT", name: "D72 BK H FRONT", category: "Automotive", img: "/Products/BLAUPUNKT/D72-BK-H-FRONT-1024x1024.png" },
   { id: 54, brand: "BLAUPUNKT", name: "D91BK", category: "Automotive", img: "/Products/BLAUPUNKT/D91BK-1024x1024.png" },
-  { id: 56, brand: "BLAUPUNKT", name: "Electronic Relay RY5P12V30", category: "Automotive", img: "/Products/BLAUPUNKT/ELECTRONIC_RELAY_RY5P12V30_gallery2.jpg" },
+  { id: 56, brand: "BLAUPUNKT", name: "Electronic Relay RY5P12V30", category: "Automotive", img: "/Products/BLAUPUNKT/ELECTRONIC_RELAY_RY5P12V30_gallery2.png" },
   { id: 57, brand: "BLAUPUNKT", name: "Premium Wiper", category: "Automotive", img: "/Products/BLAUPUNKT/PREMIUM WIPER.png" },
   { id: 58, brand: "BLAUPUNKT", name: "S79-RD", category: "Automotive", img: "/Products/BLAUPUNKT/S79-RD-1024x1024.png" },
   { id: 59, brand: "BLAUPUNKT", name: "S-92-RD", category: "Automotive", img: "/Products/BLAUPUNKT/S-92-RD-1024x1024.png" },
-  { id: 60, brand: "BLAUPUNKT", name: "VED ROK 181", category: "Automotive", img: "/Products/BLAUPUNKT/VED ROK 181.jpg" },
-  { id: 61, brand: "BLAUPUNKT", name: "Velocity Wiper Blade", category: "Automotive", img: "/Products/BLAUPUNKT/VELOCITY_WIPER_BLADE_gallery-1.jpg" },
-  { id: 62, brand: "BLAUPUNKT", name: "VBS 180 BK", category: "Automotive", img: "/Products/BLAUPUNKT/Website_VBS-180-BK-01-1024x1024.jpg" },
+  { id: 60, brand: "BLAUPUNKT", name: "VED ROK 181", category: "Automotive", img: "/Products/BLAUPUNKT/VED ROK 181.png" },
+  { id: 61, brand: "BLAUPUNKT", name: "Velocity Wiper Blade", category: "Automotive", img: "/Products/BLAUPUNKT/VELOCITY_WIPER_BLADE_gallery-1.png" },
+  { id: 62, brand: "BLAUPUNKT", name: "VBS 180 BK", category: "Automotive", img: "/Products/BLAUPUNKT/Website_VBS-180-BK-01-1024x1024.png" },
 
   //-----------------------------------------------------ENI-----------------------------------------------------//
                                     //-------------------HDEO-------------------//
@@ -90,11 +90,11 @@ export const products = [
                                     //-------------------MCO-------------------//
   { id: 68, brand: "ENI LUBRICANTS", name: "1L ENI I RIDE ULTRA SCOOTER MB 5W-40", category: "Motorcycle", img: "/Products/ENI/MCO/1L ENI I RIDE ULTRA SCOOTER MB 5W-40-10657F0B0.png" },
   { id: 69, brand: "ENI LUBRICANTS", name: "1L ENI I-RIDE SUPER 4T 20W-40", category: "Motorcycle", img: "/Products/ENI/MCO/1L ENI I-RIDE SUPER 4T 20W-40- 8802F2B3.png" },
-  { id: 70, brand: "ENI LUBRICANTS", name: "I-RIDE CLASSIC 4T 20W-50", category: "Motorcycle", img: "/Products/ENI/MCO/i-RIDE CLASSIC 4T 20W-50.png" },
+  // { id: 70, brand: "ENI LUBRICANTS", name: "I-RIDE CLASSIC 4T 20W-50", category: "Motorcycle", img: "/Products/ENI/MCO/i-RIDE CLASSIC 4T 20W-50.png" },
   { id: 71, brand: "ENI LUBRICANTS", name: "I-RIDE CLASSIC 4T SAE 10W40", category: "Motorcycle", img: "/Products/ENI/MCO/I-RIDE CLASSIC 4T SAE 10W40.png" },
   { id: 72, brand: "ENI LUBRICANTS", name: "I-RIDE CLASSIC 4T SAE 15W40", category: "Motorcycle", img: "/Products/ENI/MCO/I-RIDE CLASSIC 4T SAE 15W40.png" },
   { id: 73, brand: "ENI LUBRICANTS", name: "I-RIDE MOTO 4T TEC 10W40", category: "Motorcycle", img: "/Products/ENI/MCO/I-RIDE MOTO 4T TEC 10W40.png" },
-  { id: 74, brand: "ENI LUBRICANTS", name: "I-Ride Racing Tec 10W-50", category: "Motorcycle", img: "/Products/ENI/MCO/i-Ride Racing Tec 10W-50.jpg" },
+  { id: 74, brand: "ENI LUBRICANTS", name: "I-Ride Racing Tec 10W-50", category: "Motorcycle", img: "/Products/ENI/MCO/i-Ride Racing Tec 10W-50.png" },
   { id: 75, brand: "ENI LUBRICANTS", name: "I-RIDE RACING TEC SAE 5W40", category: "Motorcycle", img: "/Products/ENI/MCO/I-RIDE RACING TEC SAE 5W40.png" },
   { id: 76, brand: "ENI LUBRICANTS", name: "I-RIDE SCOOTER MA2 10W40", category: "Motorcycle", img: "/Products/ENI/MCO/I-RIDE SCOOTER MA2 10W40.png" },
   { id: 77, brand: "ENI LUBRICANTS", name: "I-RIDE SCOOTER MB 4T 10W40", category: "Motorcycle", img: "/Products/ENI/MCO/I-RIDE SCOOTER MB 4T 10W40.png" },
@@ -223,12 +223,12 @@ export const products = [
 
 //-----------------------------------------------------WHIZ-----------------------------------------------------//
 
-{ id: 171, brand: "WHIZ", name: "GEAR OIL", category: "Motorcycle", img: "/Products/WHIZ/P2880352.JPG" },
-{ id: 172, brand: "WHIZ", name: "SUPER OIL TREATMENT", category: "Motorcycle", img: "/Products/WHIZ/P2880364.JPG" },
-{ id: 173, brand: "WHIZ", name: "SUPER HD 40", category: "Motorcycle", img: "/Products/WHIZ/P2880374.JPG" },
-{ id: 174, brand: "WHIZ", name: "SL MAX FULLY ENGINE OIL", category: "Motorcycle", img: "/Products/WHIZ/P2880375.JPG" },
-{ id: 175, brand: "WHIZ", name: "SL MAX FULLY ENGINE OIL", category: "Motorcycle", img: "/Products/WHIZ/P2880384.JPG" },
-{ id: 176, brand: "WHIZ", name: "ATF D III/M", category: "Motorcycle", img: "/Products/WHIZ/P2880391.JPG" },
+{ id: 171, brand: "WHIZ", name: "GEAR OIL", category: "Motorcycle", img: "/Products/WHIZ/P2880352.png" },
+{ id: 172, brand: "WHIZ", name: "SUPER OIL TREATMENT", category: "Motorcycle", img: "/Products/WHIZ/P2880364.png" },
+{ id: 173, brand: "WHIZ", name: "SUPER HD 40", category: "Motorcycle", img: "/Products/WHIZ/P2880374.png" },
+{ id: 174, brand: "WHIZ", name: "SL MAX FULLY ENGINE OIL", category: "Motorcycle", img: "/Products/WHIZ/P2880375.png" },
+{ id: 175, brand: "WHIZ", name: "SL MAX FULLY ENGINE OIL", category: "Motorcycle", img: "/Products/WHIZ/P2880384.png" },
+{ id: 176, brand: "WHIZ", name: "ATF D III/M", category: "Motorcycle", img: "/Products/WHIZ/P2880391.png" },
 { id: 177, brand: "WHIZ", name: "BRAKE FLUID", category: "Motorcycle", img: "/Products/WHIZ/Screenshot 2025-07-25 112158.png" },
 
 ];
