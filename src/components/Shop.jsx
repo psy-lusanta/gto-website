@@ -243,7 +243,7 @@ export default function Shop() {
             </span>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2 className="font-black text-5xl sm:text-6xl text-[#1c1505] dark:text-white leading-none"
+            <h2 className="font-black text-4xl sm:text-6xl text-[#1c1505] dark:text-white leading-none"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               {activeBrand !== "All" ? (
                 <>{activeBrand} <em className="text-yellow-500 not-italic">Products</em></>

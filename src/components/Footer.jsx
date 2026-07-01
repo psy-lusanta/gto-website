@@ -18,7 +18,6 @@ const policies = [
   { label: "Privacy Policy",    path: "/privacy-policy" },
   { label: "Refund Policy",     path: "/refund-policy" },
   { label: "FAQ",               path: "/faq" },
-  { label: "Become a Reseller", href: "https://gtotrading.com.ph/become-a-seller" },
 ];
 
 const socials = [
