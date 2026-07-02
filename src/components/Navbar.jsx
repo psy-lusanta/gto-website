@@ -164,7 +164,7 @@ export default function Navbar() {
               <LogIn size={15} /> Login
             </button>
 
-            <button className="lg:hidden" onClick={() => setMenuOpen(o => !o)}>
+            <button className="lg:hidden dark:text-white text-black" onClick={() => setMenuOpen(o => !o)}>
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
@@ -172,85 +172,60 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden fixed top-[72px] left-0 right-0 bottom-0 z-[100] bg-[#fdfbf3] dark:bg-[#08070a] transition-all duration-300 ${menuOpen ? "opacity-100 translate-y-0 " : "opacity-0 pointer-events-none -translate-y-4"
+          className={`lg:hidden fixed top-[72px] left-0 right-0 bottom-0 z-[100] transition-all duration-300 ${menuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 pointer-events-none -translate-y-4"
             }`}
         >
           <div
-            className="h-100 overflow-y-auto px-4 py-5 bg-white dark:bg-black backdrop-blur-3xl backdrop-brightness-90 border-t border-white/20"
+            className="h-[400px] overflow-y-auto px-4 py-5 bg-[#fdfbf3] dark:bg-[#08070a] backdrop-blur-2xl border-t border-white/20 dark:border-white/10"
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             {/* Home */}
             <button
               onClick={() => handleNavClick({ label: "Home" })}
-              className="w-full text-left py-3 px-4 dark:text-white text-black font-extrabold rounded-xl hover:bg-black/5 dark:hover:bg-white/5"
-            >
+              className="w-full text-left py-3 px-4 dark:text-white text-black font-extrabold rounded-xl hover:bg-black/5 dark:hover:bg-white/5">
               Home
             </button>
 
             {/* Brands */}
             <button
               onClick={() => setMobileDdOpen(!mobileDdOpen)}
-              className="w-full flex items-center justify-between py-3 px-4 dark:text-white text-black mt-2 rounded-xl font-extrabold bg-black/5 dark:bg-white/5"
-            >
+              className="w-full flex items-center justify-between py-3 px-4 dark:text-white text-black mt-2 rounded-xl font-extrabold bg-black/5 dark:bg-white/5">
               <span>Brands</span>
-
-              {mobileDdOpen ? (
-                <ChevronUp size={18} />
-              ) : (
-                <ChevronDown size={18} />
-              )}
+              {mobileDdOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </button>
 
             {mobileDdOpen && (
               <div className="mt-3 ml-2 rounded-xl dark:text-white text-black border border-[#e8dfc8] dark:border-white/10 overflow-hidden">
                 <button
-                  onClick={() => {
-                    navigate("/shop");
-                    close();
-                  }}
-                  className="w-full text-left px-4 py-3 font-bold text-yellow-500 border-b border-[#e8dfc8] dark:border-white/10"
-                >
+                  onClick={() => { navigate("/shop"); close(); }}
+                  className="w-full text-left px-4 py-3 font-bold text-yellow-500 border-b border-[#e8dfc8] dark:border-white/10 bg-transparent border-none cursor-pointer">
                   <ShoppingBag className="inline mr-2" size={15} />
                   All Products
                 </button>
-
-                {brands.map((brand) => (
-                  <button
-                    key={brand}
-                    onClick={() => {
-                      navigate(`/shop?brand=${encodeURIComponent(brand)}`);
-                      close();
-                    }}
-                    className="w-full text-left px-4 py-3 dark:text-white text-black hover:bg-yellow-50 dark:hover:bg-yellow-900/20 flex items-center gap-2"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
-                    {brand}
+                {brands.map(b => (
+                  <button key={b}
+                    onClick={() => { navigate(`/shop?brand=${encodeURIComponent(b)}`); close(); }}
+                    className="w-full text-left px-4 py-3 dark:text-white text-black hover:bg-yellow-50 dark:hover:bg-yellow-900/20 flex items-center gap-2 bg-transparent border-none cursor-pointer">
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0" />
+                    {b}
                   </button>
                 ))}
               </div>
             )}
 
             {/* Other Links */}
-            {navLinks
-              .filter((l) => l.label !== "Home")
-              .map((l) => (
-                <button
-                  key={l.label}
-                  onClick={() => handleNavClick(l)}
-                  className="w-full text-left py-3 px-4 mt-1 dark:text-white text-black font-extrabold rounded-xl hover:bg-black/5 dark:hover:bg-white/5"
-                >
-                  {l.label}
-                </button>
-              ))}
+            {navLinks.filter(l => l.label !== "Home").map(l => (
+              <button key={l.label}
+                onClick={() => handleNavClick(l)}
+                className="w-full text-left py-3 px-4 mt-1 dark:text-white text-black font-extrabold rounded-xl hover:bg-black/5 dark:hover:bg-white/5">
+                {l.label}
+              </button>
+            ))}
 
             {/* Login */}
             <button
-              onClick={() => {
-                navigate("/login");
-                close();
-              }}
-              className="w-full text-left py-3 px-4 mt-5 border-t border-[#e8dfc8] dark:border-white/10 text-yellow-500 font-extrabold"
-            >
+              onClick={() => { navigate("/login"); close(); }}
+              className="w-full text-left py-3 px-4 mt-5 border-t border-[#e8dfc8] dark:border-white/10 text-yellow-500 font-extrabold bg-transparent border-l-0 border-r-0 border-b-0 cursor-pointer">
               <LogIn className="inline mr-2" size={16} />
               Login
             </button>
