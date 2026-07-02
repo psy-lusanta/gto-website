@@ -4,83 +4,11 @@ import { Search, X, SlidersHorizontal, ChevronDown, ChevronLeft, ChevronRight } 
 import { FaSearch } from "react-icons/fa";
 import { products, brandColors } from "../data/products";
 import { useTheme } from "../context/ThemeContext";
+import BannerShop from "./ShopBanner";
 
 const brands = ["All", "ENI LUBRICANTS", "AEROPAK", "BLAUPUNKT", "SAFEWAY TIRES", "VEENTO TIRES", "AUTOGREEN TIRES", "ST POWER BATTERY", "LUBRIGOLD", "WHIZ"];
 const categories = ["All", "Automotive", "Motorcycle", "Household", "Industrial"];
 const ITEMS_PER_PAGE = 12;
-
-const slides = [
-  {
-    src: "/Banner/aeropak.jpg",
-    title: "Premium Automotive Products",
-    subtitle: "Trusted brands, delivered nationwide.",
-    cta: "Shop Now",
-    ctaBrand: null,
-  },
-  {
-    src: "/Banner/autogreen.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/blaupunkt.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/eni oil.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/gto.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/lubrigold.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/lubrigold.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/st power.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/veento.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-  {
-    src: "/Banner/whiz.jpg",
-    title: "ENI Lubricants",
-    subtitle: "World-class engine oils for motorcycles and cars.",
-    cta: "View ENI",
-    ctaBrand: "ENI LUBRICANTS",
-  },
-];
 
 function ShopBanner({ onBrandFilter }) {
   const [current, setCurrent] = useState(0);
@@ -228,7 +156,7 @@ export default function Shop() {
     <section id="shop" className="bg-[#fdfbf3] dark:bg-[#08070a] transition-colors duration-300">
 
       {/* ── Banner / Slideshow ── */}
-      <ShopBanner onBrandFilter={handleBannerBrand} />
+      <BannerShop onBrandFilter={handleBannerBrand} activeBrand={activeBrand} />
 
       {/* ── Products section ── */}
       <div id="shop-products" className="py-16">
